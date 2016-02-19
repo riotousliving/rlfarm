@@ -11,6 +11,7 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
 requires = [
     'pyramid',
     'pyramid_chameleon',
+    'pyramid_mako',
     'pyramid_debugtoolbar',
     'pyramid_tm',
     'SQLAlchemy',
@@ -18,6 +19,15 @@ requires = [
     'zope.sqlalchemy',
     'waitress',
     ]
+
+setup_requires = [
+    'pytest-runner',
+]
+
+tests_require = [
+    'webtest',
+    'pytest',
+]
 
 setup(name='rlfarm',
       version='0.0',
@@ -38,6 +48,8 @@ setup(name='rlfarm',
       zip_safe=False,
       test_suite='rlfarm',
       install_requires=requires,
+      setup_requires=setup_requires,
+      tests_require=tests_require,
       entry_points="""\
       [paste.app_factory]
       main = rlfarm:main
