@@ -1,0 +1,29 @@
+---
+- hosts: app
+  roles:
+      - role: nginx
+        nginx_events_params:
+            - worker_connections 512
+            - debug_connection 127.0.0.1
+            - use epoll
+            - multi_accept on
+        nginx_sites:
+            default:
+                - listen 80
+                - server_name rlfarm.com
+                - location / { try_files $uri $uri/ /index.html; }
+        nginx_configs:
+            proxy:
+                - proxy_set_header X-Real-IP  $remote_addr
+                - proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for
+            upstream:
+                - upstream default { server 127.0.0.1:6543; }
+
+- hosts: db
+  tasks:
+      - name: install packages
+        apt: name={{ item }} update_cache=yes state=latest
+        with_items:
+            - postgresql
+            - postgresql-client
+            - postgresql-contrib
