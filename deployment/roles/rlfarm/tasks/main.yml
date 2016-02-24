@@ -1,0 +1,12 @@
+- name: install rlfarm from github
+  shell: ~/env/bin/pip install https://github.com/wwitzel3/rlfarm/archive/master.zip
+
+- name: render production.ini
+  template: src=templates/production.ini.j2 dest=~/production.ini
+
+- name: initialize_db
+  shell: ~/env/bin/initialize_rlfarm_db ~/production.ini
+
+- name: start uwsgi
+  shell: ~/env/bin/uwsgi --ini-paste ~/production.ini
+

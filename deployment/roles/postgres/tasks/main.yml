@@ -1,0 +1,38 @@
+---
+- name: install packages
+  apt: name={{ item }} update_cache=yes state=latest
+  with_items:
+      - postgresql
+      - postgresql-client
+      - postgresql-contrib
+      - python-psycopg2
+      - makepasswd
+
+- name: generate user
+  shell: makepasswd --chars=10
+  register: dbuser
+
+- name: generate user password
+  shell: makepasswd --chars=10
+  register: dbpass
+
+- name: Ensure the PostgreSQL service is running
+  service: name=postgresql state=started enabled=yes
+
+- name: setup postgresql db
+  postgresql_db: name=rlfarm state=present
+  become_user: postgres
+  become: true
+
+- name: setup postgresql user
+  postgresql_user:
+      db=rlfarm
+      name='{{ dbuser.stdout }}'
+      password='{{ dbpass.stdout }}'
+      role_attr_flags=NOSUPERUSER,NOCREATEDB
+      state=present
+      priv=CONNECT
+  become_user: postgres
+  become: true
+
+

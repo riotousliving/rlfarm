@@ -14,7 +14,11 @@ pyramid.default_locale_name = en
 pyramid.includes =
     pyramid_tm
 
-sqlalchemy.url = sqlite:///%(here)s/rlfarm.sqlite
+{% for host in groups['db'] %}
+{% if hostvars[host]['postgres_master'] %}
+sqlalchemy.url = postgresql+psycopg2://"{{ hostvars[host]['dbuser']['stdout'] }}:{{ hostvars[host]['dbpass']['stdout'] }}@{{ host }}:5432/rlfarm
+{% endif %}
+{% endfor %}
 
 [server:main]
 use = egg:waitress#main

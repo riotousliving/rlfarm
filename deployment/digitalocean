@@ -2,7 +2,7 @@
 
 import droplets
 
-blueprint = {'app':{}, 'db':{}}
+blueprint = {'app': {}, 'db': {'postgres_master': True}}
 
 if __name__ == '__main__':
     droplets.main(blueprint)
