@@ -1,12 +1,62 @@
+---
+- name: create user
+  user: name="{{ username }}" state=present
+
+- name: remove existing venv
+  file: path=~/env state=absent
+  become: true
+  become_user: "{{ username }}"
+
+- name: create py35 virtual env
+  shell: virtualenv -p python3.5 ~/env
+  become: true
+  become_user: "{{ username }}"
+
+- name: install uwsgi
+  shell: ~/env/bin/pip install uwsgi
+  become: true
+  become_user: "{{ username }}"
+
 - name: install rlfarm from github
   shell: ~/env/bin/pip install https://github.com/wwitzel3/rlfarm/archive/master.zip
+  become: true
+  become_user: "{{ username }}"
 
 - name: render production.ini
   template: src=templates/production.ini.j2 dest=~/production.ini
+  become: true
+  become_user: "{{ username }}"
+
+- stat: path=~/.db_initialized
+  register: db_initialized
+  become: true
+  become_user: "{{ username }}"
 
 - name: initialize_db
   shell: ~/env/bin/initialize_rlfarm_db ~/production.ini
+  become: true
+  become_user: "{{ username }}"
+  when: db_initialized.stat['exists'] == False
+
+- name: .db_initialized
+  file: path=~/.db_initialized state=touch
+  when: db_initialized.stat['exists'] == False
+  become: true
+  become_user: "{{ username }}"
+
+- stat: path=~/pid_5000.pid
+  register: pid
+  become: true
+  become_user: "{{ username }}"
+
+- name: stop uwsgi
+  shell: ~/env/bin/uwsgi --stop "{{ pid.stat['path'] }}"
+  when: not pid|failed
+  become: true
+  become_user: "{{ username }}"
 
 - name: start uwsgi
-  shell: ~/env/bin/uwsgi --ini-paste ~/production.ini
+  shell: ~/env/bin/uwsgi --ini-paste-logged ~/production.ini
+  become: true
+  become_user: "{{ username }}"
 

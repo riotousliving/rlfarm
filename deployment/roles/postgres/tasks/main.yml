@@ -1,6 +1,6 @@
 ---
-- name: install packages
-  apt: name={{ item }} update_cache=yes state=latest
+- name: install system packages
+  apt: name={{ item }} update_cache=yes state=latest cache_valid_time=86400
   with_items:
       - postgresql
       - postgresql-client
@@ -8,31 +8,66 @@
       - python-psycopg2
       - makepasswd
 
-- name: generate user
-  shell: makepasswd --chars=10
+- shell: makepasswd --chars=10
   register: dbuser
 
-- name: generate user password
-  shell: makepasswd --chars=10
+- shell: makepasswd --chars=10
   register: dbpass
 
-- name: Ensure the PostgreSQL service is running
-  service: name=postgresql state=started enabled=yes
+- name: install pg_hba.conf
+  template: src=templates/pg_hba.conf.j2 dest=/etc/postgresql/9.3/main/pg_hba.conf mode=0640 owner=postgres group=postgres
 
-- name: setup postgresql db
-  postgresql_db: name=rlfarm state=present
+- name: install postresql.conf
+  template: src=templates/postgresql.conf.j2 dest=/etc/postgresql/9.3/main/postgresql.conf mode=0644 owner=postgres group=postgres
+
+- name: restart service
+  service: name=postgresql state=restarted enabled=yes
+
+- name: setup db '{{ dbname }}'
+  postgresql_db: name={{ dbname }} state=present
   become_user: postgres
   become: true
 
-- name: setup postgresql user
+- name: create db user '{{ dbuser.stdout }}'
   postgresql_user:
-      db=rlfarm
+      db='{{ dbname }}'
       name='{{ dbuser.stdout }}'
       password='{{ dbpass.stdout }}'
       role_attr_flags=NOSUPERUSER,NOCREATEDB
       state=present
-      priv=CONNECT
   become_user: postgres
   become: true
 
+- name: grant database permissions
+  postgresql_privs:
+      db='{{ dbname }}'
+      type=database
+      privs=ALL
+      roles='{{ dbuser.stdout }}'
+  become: true
+  become_user: postgres
 
+- name: grant table permissions
+  postgresql_privs:
+      db='{{ dbname }}'
+      objs=ALL_IN_SCHEMA
+      type=table
+      privs=ALL
+      roles='{{ dbuser.stdout }}'
+  become: true
+  become_user: postgres
+
+- name: grant sequence permissions
+  postgresql_privs:
+      db='{{ dbname }}'
+      objs=ALL_IN_SCHEMA
+      type=sequence
+      privs=ALL
+      roles='{{ dbuser.stdout }}'
+  become: true
+  become_user: postgres
+
+- name: export db details
+  set_fact:
+      dbport: "{{ dbport }}"
+      dbname: "{{ dbname }}"

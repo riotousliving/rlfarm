@@ -2,6 +2,31 @@
 # app configuration
 # http://docs.pylonsproject.org/projects/pyramid/en/1.6-branch/narr/environment.html
 ###
+[uwsgi]
+socket = /tmp/uwsgi.sock
+master = true
+
+processes = 4
+
+harakiri = 60
+harakiri-verbose = true
+limit-post = 65536
+post-buffering = 8192
+
+daemonize = ./uwsgi.log
+pidfile = ./pid_5000.pid
+
+listen = 128
+
+max-requests = 1000
+
+reload-on-as = 128
+reload-on-rss = 96
+no-orphans = true
+
+log-slow = true
+
+virtualenv = /home/{{ username }}/env
 
 [app:main]
 use = egg:rlfarm
@@ -16,7 +41,7 @@ pyramid.includes =
 
 {% for host in groups['db'] %}
 {% if hostvars[host]['postgres_master'] %}
-sqlalchemy.url = postgresql+psycopg2://"{{ hostvars[host]['dbuser']['stdout'] }}:{{ hostvars[host]['dbpass']['stdout'] }}@{{ host }}:5432/rlfarm
+sqlalchemy.url = postgresql+psycopg2://{{ hostvars[host]['dbuser']['stdout'] }}:{{ hostvars[host]['dbpass']['stdout'] }}@{{ host }}:{{ hostvars[host]['dbport'] }}/{{ hostvars[host]['dbname'] }}
 {% endif %}
 {% endfor %}
 

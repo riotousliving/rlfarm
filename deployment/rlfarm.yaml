@@ -2,25 +2,23 @@
 - hosts: db
   roles:
       - role: postgres
+        dbname: rlfarm
 
 - hosts: app
   roles:
-      - role: python
+      - role: python35
+
       - role: rlfarm
-  #      - role: nginx
-  #        nginx_events_params:
-  #            - worker_connections 512
-  #            - debug_connection 127.0.0.1
-  #            - use epoll
-  #            - multi_accept on
-  #        nginx_sites:
-  #            default:
-  #                - listen 80
-  #                - server_name rlfarm.com
-  #                - location / { proxy_pass http://default; proxy_redirect off; }
-  #        nginx_configs:
-  #            proxy:
-  #                - proxy_set_header X-Real-IP  $remote_addr
-  #                - proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for
-  #            upstream:
-  #                - upstream default { server 127.0.0.1:6543; }
+        username: webapp
+
+      - role: nginx
+        nginx_events_params:
+            - worker_connections 512
+            - debug_connection 127.0.0.1
+            - use epoll
+            - multi_accept on
+        nginx_sites:
+            default:
+                - listen 80
+                - server_name rlfarm.com
+                - location / { uwsgi_pass unix:///tmp/uwsgi.sock; include uwsgi_params; }
