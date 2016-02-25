@@ -1,0 +1,282 @@
+.ct-tabs{
+  &.ct-tabs--type1{
+    width: 100%;
+
+    .ct-tabs-nav{
+      text-align: right;
+      border-bottom: 4px solid @borderColor9;
+
+      li{
+        float: none;
+        display: inline-block;
+        margin-bottom: -4px;
+
+        a{
+          padding: 11px 19px;
+          margin-left: -6px;
+          background-color: transparent;
+          color:  @colorGray1;
+          font-weight: 600;
+          line-height: 2;
+          text-transform: uppercase;
+
+          border: none;
+
+          .ct-m-boxShadow(none);
+          .ct-m-rounded(0);
+          .ct-m-transition(all, .3s, ease);
+        }
+
+        &.active, &:hover{
+          a{
+            border: none;
+            color: white;
+            background-color: @backgroundGreen;
+          }
+        }
+      }
+    }
+
+    .ct-tabs-content{
+      margin-top: 10px;
+
+      .ct-tabs-panel{
+
+        &.active{
+
+        }
+      }
+    }
+  }
+
+  &.ct-tabs--type2{
+    width: 100%;
+    position: relative;
+
+    .ct-tabs-nav{
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 30%;
+      z-index: 1;
+
+      border: none;
+
+      li{
+
+        padding-left: 0;
+
+        a{
+          background-position: 0 0;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          background-image: none;
+
+          margin-top: 8px;
+
+          padding: 0 25px 0 0;
+          height: 100%;
+
+          background-color: transparent;
+          border: none;
+          .ct-m-boxShadow(none);
+          .ct-m-rounded(0);
+          .ct-m-transition(all, .3s, ease);
+
+          > div{
+            min-width: 265px;
+
+            > *{
+              margin: 0;
+            }
+
+            span{
+              margin-left: 25px;
+
+              font-family: @fontFamily2;
+              line-height: 1.51111;
+              color: @motive;
+              text-transform: uppercase;
+
+              .ct-m-transition(all, .3s, ease);
+            }
+
+            small{
+              margin: -24px 0 15px;
+
+              span{
+                font-family: @fontFamily1;
+                color:  @colorYellow;
+                font-weight: 600;
+                font-size: 0.311em;
+                .ct-m-transition(all, .3s, ease);
+              }
+            }
+          }
+        }
+
+        &.active, &:hover{
+
+          a{
+            background-image: url(@tabBigArrowBG);
+            background-color: transparent;
+
+            > div{
+              span{
+                color: @colorWhite;
+              }
+
+              small{
+                span{
+                  color: @colorWhite;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ct-tabs-content{
+      margin-top: 10px;
+
+      .ct-tabs-panel{
+
+        &.active{
+
+        }
+
+        .tab-content-media{
+          width: 70%;
+          margin-bottom: 140px;
+          padding-left: 10px;
+          margin-left: 30%;
+
+          img{
+            width: 100%;
+          }
+        }
+
+        .tab-content-text{
+          margin-bottom: 40px;
+          
+          p{
+            color:  @colorGray1;
+            font-weight: 400;
+            line-height: 2.28571;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tab-content{
+  position: relative;
+}
+.tab-content > .tab-pane{
+
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: -9999px;
+  left: -9999px;
+}
+
+.tab-content > .active{
+  visibility: visible;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: @screen-lg){
+  .ct-tabs{
+
+    &.ct-tabs--type2{
+
+      .ct-tabs-nav{
+        width: 35%;
+      }
+
+      .ct-tabs-content{
+
+        .ct-tabs-panel{
+
+          &.active{
+
+          }
+
+          .tab-content-media{
+            width: 65%;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: @screen-md){
+  .ct-tabs{
+
+    &.ct-tabs--type2{
+
+      .ct-tabs-nav{
+        position: static;
+        width: 100%;
+        margin-bottom: 60px;
+
+        li{
+          float: none;
+          max-width: 300px;
+          margin: 0 auto;
+        }
+      }
+
+      .ct-tabs-content{
+        margin-top: 10px;
+
+        .ct-tabs-panel{
+
+          .tab-content-media{
+            width: 100%;
+            margin-bottom: 100px;
+            padding-left: 0;
+            margin-left: 0;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-sm){
+  .tab-content > .tab-pane{
+    overflow: auto;
+  }
+}
+
+@media (max-width: @screen-xs){
+  .ct-tabs{
+
+    &.ct-tabs--type2{
+
+      .ct-tabs-nav{
+        li{
+          max-width: 250px;
+
+          a{
+            > div{
+              width: 226px;
+              min-width: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

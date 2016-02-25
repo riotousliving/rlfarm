@@ -1,0 +1,54 @@
+.ct-progressBar{
+  margin-bottom: 68px;
+
+  .ct-progressBar-content{
+    .progress{
+      height: 12px;
+      background-color: @backgroundGray2;
+      overflow: visible;
+
+      .ct-m-boxShadow(none);
+      .ct-m-rounded(0);
+
+
+      .progress-bar{
+        position: relative;
+        background-color: @backgroundGreen;
+        overflow: visible;
+        .ct-m-boxShadow(none);
+
+        > span{
+          text-align: left;
+          color:  #70716f;
+          font-size: 14px;
+
+          position: absolute;
+
+          top: -32px;
+          left: 0;
+
+        }
+
+        .ct-progressBar-percent{
+          position: absolute;
+          top: -13px;
+          right: -20px;
+
+          width: 39px;
+          height: 39px;
+
+          background-image: url(@sliderArrowGreenBG);
+          background-repeat: no-repeat;
+          background-size: 100%;
+          background-position: 0;
+
+          span{
+            line-height: 39px;
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

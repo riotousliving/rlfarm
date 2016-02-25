@@ -1,0 +1,35 @@
+.ct-divider{
+  position: relative;
+  margin: 0 auto 20px auto;
+
+  border-bottom: 1px solid @borderColor;
+
+  &:before, &:after{
+    position: absolute;
+    left: 0;
+
+    content: '';
+
+    display: block;
+    width: 100%;
+    height: 1px;
+
+    background-color: @borderColor;
+  }
+
+  &:before{
+    top: 3px;
+  }
+
+  &:after{
+    top: 6px;
+  }
+
+  &.ct-divider--small{
+    width: 40%;
+  }
+
+  &.ct-divider--big{
+    width: 100%;
+  }
+}

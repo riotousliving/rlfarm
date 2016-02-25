@@ -1,0 +1,67 @@
+.ct-breadcrumbs{
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+
+  .ct-breadcrumbs-title{
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(@breadcrumbsTitleBG);
+
+    font-weight: 400;
+    font-size: 4.857rem;
+
+    min-width: 27.143rem;
+    min-height: 7.143rem;
+
+    position: absolute;
+    bottom: 2.643rem;
+    right: 2.357rem;
+
+    padding: 0 10px;
+
+    text-align: center;
+    line-height: 1.4;
+    vertical-align: middle;
+    color: @colorWhite;
+    font-family: @fontFamily2;
+  }
+}
+
+.ct-breadcrumbs-container{
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.breadcrumb{
+  padding: 8px 15px 8px 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0;
+  font-size: 1.2rem;
+  text-align: right;
+
+  li{
+    a{
+      text-decoration: none;
+
+    }
+
+    &.active{
+
+    }
+  }
+}
+
+@media (max-width: @screen-sm){
+  .ct-breadcrumbs{
+    .ct-breadcrumbs-title{
+      bottom: 1rem;
+      right: .8rem;
+    }
+  }
+}

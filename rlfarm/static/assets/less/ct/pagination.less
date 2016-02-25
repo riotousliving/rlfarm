@@ -1,0 +1,31 @@
+.ct-pagination{
+  ul{
+    li{
+      a{
+        font-family: @fontFamily2;
+        color: @colorBrown1;
+        font-size: 2.500rem;
+        font-weight: 700;
+
+        display: block;
+        width: 1.194em;
+        height: 1.556em;
+
+        background-position: 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        text-decoration: none;
+
+        .ct-m-transition(all, 0s, ease);
+
+        &.active, &:hover{
+
+          background-image: url(@paginationBG);
+
+          color: @colorWhite;
+        }
+      }
+    }
+  }
+}

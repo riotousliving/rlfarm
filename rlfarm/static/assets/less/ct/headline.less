@@ -1,0 +1,62 @@
+.ct-headline{
+  overflow: hidden;
+  margin-bottom: 0;
+
+  > small{
+    margin-bottom: 0;
+  }
+
+  .ct-headline-container{
+    position: relative;
+    display: inline-block;
+
+    font-weight: 400;
+    font-family: @fontFamily2;
+
+    .ct-headline-line{
+      background-color: @borderColor;
+      position: absolute;
+      top: 50%;
+
+      display: block;
+      width: 999999px;
+      height: 1px;
+      margin-top: 3px;
+
+
+      &:before, &:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+      }
+
+      &:before{
+        margin-top: -3px;
+      }
+
+      &:after{
+        margin-top: 3px;
+      }
+
+      &.ct-headline-line--left{
+        right: 100%;
+        margin-right: 1.786rem;
+        &:before, &:after{
+          right: 0;
+          background-color: inherit;
+        }
+      }
+
+      &.ct-headline-line--right{
+        left: 100%;
+        margin-left: 1.786rem;
+        &:before, &:after{
+          left: 0;
+
+          background-color: inherit;
+        }
+      }
+    }
+  }
+}

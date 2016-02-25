@@ -1,0 +1,252 @@
+.btn{
+  font-family: @fontFamily2;
+  font-size: 2.143rem;
+  font-weight: 700;
+  line-height: 1;
+
+  padding: 0.650rem 2.4rem;
+
+  text-transform: uppercase;
+
+  .ct-m-boxShadow(none) !important;
+
+  span{
+    i{
+      margin: 0 7px;
+    }
+  }
+
+  &.btn-sm{
+    font-size: 1.5rem;
+  }
+
+  &.btn-lg{
+    font-size: 2.8rem;
+    padding: 0.714rem 1.643rem;
+  }
+
+  .ct-m-rounded(0);
+  .ct-m-transition(all, .3s, ease);
+
+
+  & + .btn{
+    margin-left: 30px;
+  }
+
+  &.ct-btn-link{
+    background-color: transparent;
+    border: none !important;
+
+    &.btn-success{
+      color: @btnSuccessColorBG;
+
+      &:hover{
+        color:  @colorBrown1;
+      }
+    }
+
+    &.btn-danger{
+      color: @btnDangerColorBG;
+
+      &:hover{
+        color:  @colorBrown1;
+      }
+    }
+
+    &.btn-warning{
+      color: @btnWarningColorBG;
+
+      &:hover{
+        color:  @colorBrown1;
+      }
+    }
+
+    &.btn-info{
+      color: @btnInfoColorBG;
+
+      &:hover{
+        color:  @colorBrown1;
+      }
+    }
+
+    &.btn-primary{
+      color: @btnPrimaryColorBG;
+
+      &:hover{
+        color:  @colorBrown1;
+      }
+    }
+
+    &.btn-default{
+      color: @btnDefaultColorBG;
+
+      &:hover{
+        color:  @colorBrown1;
+      }
+    }
+
+    &.btn-motive{
+      color: @btnMotiveColorBG;
+
+      &:hover{
+        color:  @colorBrown1;
+      }
+    }
+  }
+
+  &.ct-btn-default{
+    color: @colorWhite !important;
+    border: none !important;
+    font-weight: 400;
+
+    &.btn-success{
+      background-color: @btnSuccessColorBG;
+
+      &:hover{
+        background-color: darken(@btnSuccessColorBG, 10%);
+      }
+    }
+
+    &.btn-danger{
+      background-color: @btnDangerColorBG;
+
+      &:hover{
+        background-color: darken(@btnDangerColorBG, 10%);
+      }
+    }
+
+    &.btn-warning{
+      background-color: @btnWarningColorBG;
+
+      &:hover{
+        background-color: darken(@btnWarningColorBG, 10%);
+      }
+    }
+
+    &.btn-info{
+      background-color: @btnInfoColorBG;
+
+      &:hover{
+        background-color: darken(@btnInfoColorBG, 10%);
+      }
+    }
+
+    &.btn-primary{
+      background-color: @btnPrimaryColorBG;
+
+      &:hover{
+        background-color: darken(@btnPrimaryColorBG, 10%);
+      }
+    }
+
+    &.btn-default{
+      background-color: @btnDefaultColorBG;
+
+      &:hover{
+        background-color: darken(@btnDefaultColorBG, 10%);
+      }
+    }
+
+    &.btn-motive{
+      background-color: @btnMotiveColorBG;
+
+      &:hover{
+        background-color: darken(@btnMotiveColorBG, 10%);
+      }
+    }
+  }
+
+  &.ct-btn-image{
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent !important;
+    border: none !important;
+    color: @colorWhite !important;
+
+    position: relative;
+
+    span{
+      position: relative;
+    }
+
+    &:before{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      content: '';
+      display: block;
+      width: 75%;
+      height: 75%;
+      margin: auto;
+
+      .ct-m-transition(all, .5s, ease);
+    }
+
+    &:hover{
+      &:before{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &.btn-success{
+      background-image: url(@btnSuccessBG);
+
+      &:before{
+        background-color: @btnSuccessColorBG;
+      }
+    }
+
+    &.btn-danger{
+      background-image: url(@btnDangerBG);
+
+      &:before{
+        background-color: @btnDangerColorBG;
+      }
+    }
+
+    &.btn-warning{
+      background-image: url(@btnWarningBG);
+
+      &:before{
+        background-color: @btnWarningColorBG;
+      }
+    }
+
+    &.btn-info{
+      background-image: url(@btnInfoBG);
+
+      &:before{
+        background-color: @btnInfoColorBG;
+      }
+    }
+
+    &.btn-primary{
+      background-image: url(@btnPrimaryBG);
+
+      &:before{
+        background-color: @btnPrimaryColorBG;
+      }
+    }
+
+    &.btn-default{
+      background-image: url(@btnDefaultBG);
+
+      &:before{
+        background-color: @btnDefaultColorBG;
+      }
+    }
+
+    &.btn-motive{
+      background-image: url(@btnMotiveBG);
+
+      &:before{
+        background-color: @btnMotiveColorBG;
+      }
+    }
+  }
+}

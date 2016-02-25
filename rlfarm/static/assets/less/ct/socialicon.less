@@ -1,0 +1,143 @@
+.socialicons{
+  font-size: .95rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li{
+    margin-left: 7px;
+
+    a{
+      display: block;
+      height: 1.857em;
+      width: 1.857em;
+      text-align: center;
+
+      i{
+        font-size: 0.786em;
+        line-height: 2.364em;
+        color: @colorWhite;
+        vertical-align: middle;
+      }
+    }
+
+    &:first-child{
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    &:last-child{
+      margin-right: 0;
+      padding-right: 0;
+    }
+
+    list-style-type: none;
+    float: left;
+  }
+
+  &.socialicons--circle{
+    li{
+      a{
+        .ct-m-rounded(50%);
+        background-color: @socialBGColor;
+        width: 1.857rem;
+        height: 1.857rem;
+      }
+    }
+  }
+
+  &.socialicons--image{
+    li{
+      a{
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: relative;
+
+        &:before{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+
+          content: '';
+          display: block;
+          width: 1.429rem;
+          height: 1.429rem;
+          margin: auto;
+          .ct-m-rounded(50%);
+          background-color: @socialBGColor;
+          .ct-m-transition(all, .3s, ease);
+
+        }
+
+        &:hover{
+         &:before{
+           width: 100%;
+           height: 100%;
+         }
+        }
+      }
+
+      &:nth-child(6n){
+        a{
+          background-image: url(@socialBG1);
+          i{
+            .ct-m-rotation(0);
+          }
+        }
+      }
+
+      &:nth-child(6n + 1){
+        a{
+          background-image: url(@socialBG2);
+          i{
+            .ct-m-rotation(0);
+          }
+        }
+      }
+
+      &:nth-child(6n + 2){
+        a{
+          background-image: url(@socialBG3);
+          i{
+            .ct-m-rotation(0);
+          }
+        }
+      }
+
+      &:nth-child(6n + 3){
+        a{
+          background-image: url(@socialBG1);
+          .ct-m-rotation(90deg);
+
+          i{
+            .ct-m-rotation(-90deg);
+          }
+        }
+      }
+
+      &:nth-child(6n + 4){
+        a{
+          background-image: url(@socialBG2);
+          .ct-m-rotation(90deg);
+
+          i{
+            .ct-m-rotation(-90deg);
+          }
+        }
+      }
+
+      &:nth-child(6n + 5){
+        a{
+          background-image: url(@socialBG3);
+          .ct-m-rotation(90deg);
+
+          i{
+            .ct-m-rotation(-90deg);
+          }
+        }
+      }
+    }
+  }
+}

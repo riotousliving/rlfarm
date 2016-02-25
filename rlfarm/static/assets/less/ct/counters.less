@@ -1,0 +1,183 @@
+.ct-counter{
+  margin-bottom: 40px;
+
+  text-align: center;
+
+  .ct-counter-icon{
+    text-align: center;
+    vertical-align: middle;
+
+    width: 6.143rem;
+    height: 6.143rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    background-color: @backgroundYellow;
+
+    .ct-m-rounded(50%);
+
+    i{
+      color: @colorWhite;
+      font-size: 2.929rem;
+      line-height: 6.143rem;
+    }
+  }
+
+  .ct-counter-number{
+    font-family: @fontFamily2;
+
+    text-align: center;
+
+    font-size: 4.857rem;
+
+    margin-bottom: 25px;
+
+  }
+
+  .ct-counter-text{
+    text-align: center;
+
+    span{
+      color: @motive;
+      font-size: 0.706em;
+    }
+  }
+}
+
+
+.counter-block{
+  font-size: 1rem;
+
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: @fontFamily2;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .counter{
+    width:140px !important;
+    height: 140px !important;
+    background-color:transparent;
+
+    .number{
+      width:auto;
+      font-size: 7.143rem;
+      font-weight: 400;
+      line-height: 140px;
+      background-color:transparent;
+    }
+    .hundreds{
+      display:none !important;
+    }
+  }
+  .counter-caption{
+    font-family: @fontFamily1;
+    background-color: transparent;
+    color: @motive;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 2.143rem;
+  }
+}
+.counter-block .counter .number.tens {
+  left: 25%;
+  z-index: @z-index-6;
+}
+.counter-block .counter .number.units {
+  right:25%;
+  left:auto;
+}
+
+@media (max-width: @screen-md) {
+  .counter-block{
+    display: block;
+    width: auto;
+    float: none;
+    margin-bottom: 30px;
+  }
+}
+
+
+// Graph Boxes // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.col-md-4 {
+  .ct-graphBox {
+    &.ct-graphBox--default {
+      text-align: center;
+      .ct-graphBox-graph {
+        margin: 0 80px 40px;
+        line-height: 1;
+      }
+    }
+  }
+}
+.col-md-3 {
+  .ct-graphBox {
+    &.ct-graphBox--default {
+      text-align: center;
+      .ct-graphBox-graph {
+        margin: 0 30px 40px;
+      }
+    }
+  }
+}
+
+.ct-graphBox{
+  &.ct-graphBox--default{
+    text-align: center;
+    .ct-graphBox-graph{
+      position: relative;
+      margin-bottom: 40px;
+      .ct-graphBox-graphPercentage{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin-top: -25px;
+        font-size: 50px;
+        line-height: 1;
+        font-weight: 300;
+        text-align: center;
+      }
+    }
+    .ct-graphBox-title{
+      margin: 25px 0;
+    }
+    h5.ct-graphBox-title{
+      line-height: 29px;
+    }
+  }
+}
+
+.ct--darkMotive .ct-graphBox.ct-graphBox--default .ct-graphBox-graph .ct-graphBox-graphPercentage{
+  color: #ffffff;
+}
+
+@media (max-width: @screen-sm-max) {
+  .ct-graphBox{
+    &.ct-graphBox--default{
+      .ct-graphBox-graph{
+        margin: 0;
+      }
+    }
+  }
+
+  .col-sm-4{
+    .ct-graphBox {
+      &.ct-graphBox--default {
+        text-align: center;
+        .ct-graphBox-graph {
+          margin: 0;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
+
+.line{
+  max-width: 100%;
+}

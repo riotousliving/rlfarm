@@ -1,0 +1,528 @@
+/*------------------------------------------------------------------
+Project:	FarmFresh HTML Template
+Version:	2.0
+Last change:  10 april 2015
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Variables
+2. Bootstrap
+3. Mixins
+4. Animate
+5. Magnific
+6. Animate
+7. Typography
+8. Maps
+9. Menu
+10. Social Icon
+11. Image Box
+12. Headline
+13. Slick
+14. Newsletter
+15. Footer
+16. Form
+17. Modal
+18. Buttons
+19. Breadcrumbs
+20. Blog
+21. Divider
+22. Pagination
+23. Media Object
+24. Widget
+25. Blockquote
+26. Comment
+27. Portfolio
+28. Info Box
+29. Accordion
+30. Tabs
+31. Table
+32. Event
+33. Tweet
+34. Icon Box
+35. Pricing Tables
+36. Progress Bar
+37. Counters
+
+------------------------------------------------------------------*/
+
+
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans:400italic,600italic,700italic,400,600,700&subset=latin,latin-ext);
+
+
+/*------------------------ Variables ------------------------------*/
+
+@import "ct/variables.less";
+
+/*------------------------- z-index -------------------------------*/
+
+@z-index-1: 1000;
+@z-index-2: 2000;
+@z-index-3: 3000;
+@z-index-4: 4000;
+@z-index-5: 5000;
+@z-index-6: 6000;
+@z-index-7: 7000;
+@z-index-8: 8000;
+@z-index-9: 9000;
+
+/*------------------------ Bootstrap ------------------------------*/
+
+//@import "bootstrap.less";
+
+/*-------------------------- Mixins -------------------------------*/
+
+@import "ct/mixins.less";
+
+/*------------------------- Animate -------------------------------*/
+
+@import "animate.min.less";
+
+/*------------------------- Magnific ------------------------------*/
+
+@import "magnific-popup.less";
+
+/*------------------------- Animate -------------------------------*/
+
+@import "ct/mediasections.less";
+
+/*------------------------ Typography -----------------------------*/
+
+@import "ct/typography.less";
+
+/*--------------------------- Maps --------------------------------*/
+
+@import "ct/maps.less";
+
+/*--------------------------- Menu --------------------------------*/
+
+@import "yamm.less";
+@import "ct/menu.less";
+
+
+/*------------------------ Social Icon -----------------------------*/
+
+@import "ct/socialicon.less";
+
+/*------------------------- Image Box ------------------------------*/
+
+@import "ct/imageBox.less";
+
+/*-------------------------- Headline ------------------------------*/
+
+@import "ct/headline.less";
+
+/*---------------------------- Slick -------------------------------*/
+
+@import "../plugins/slick/slick.less";
+@import "../plugins/slick/slick-theme.less";
+@import "ct/slider.less";
+
+/*------------------------- Newsletter -----------------------------*/
+
+@import "ct/newsletter.less";
+
+/*--------------------------- Footer -------------------------------*/
+
+@import "ct/footer.less";
+
+/*---------------------------- Form --------------------------------*/
+
+@import "ct/form.less";
+
+/*---------------------------- Modal -------------------------------*/
+
+@import "modal.less";
+
+/*--------------------------- Buttons ------------------------------*/
+
+@import "ct/buttons.less";
+
+/*------------------------- Breadcrumbs ----------------------------*/
+
+@import "ct/breadcrumbs.less";
+
+/*----------------------------- Blog -------------------------------*/
+
+@import "ct/blog.less";
+
+/*---------------------------- Divider -----------------------------*/
+
+@import "ct/divider.less";
+
+/*-------------------------- Pagination ----------------------------*/
+
+@import "ct/pagination.less";
+
+/*------------------------- Media Object ---------------------------*/
+
+@import "ct/mediaObject.less";
+
+
+/*---------------------------- Widget ------------------------------*/
+
+@import "ct/widget.less";
+
+/*--------------------------- Blockquote ----------------------------*/
+
+@import "ct/blockquote.less";
+
+/*---------------------------- Comment ------------------------------*/
+
+@import "ct/comment.less";
+
+/*--------------------------- Portfolio -----------------------------*/
+
+@import "ct/portfolio.less";
+
+/*---------------------------- Info Box -----------------------------*/
+
+@import "ct/infoBox.less";
+
+/*---------------------------- Accordion ----------------------------*/
+
+@import "ct/accordion.less";
+
+/*------------------------------ Tabs -------------------------------*/
+
+@import "ct/tabs.less";
+
+/*----------------------------- Table -------------------------------*/
+
+@import "ct/table.less";
+
+/*----------------------------- Event -------------------------------*/
+
+@import "ct/event.less";
+
+/*----------------------------- Tweet -------------------------------*/
+
+@import "ct/tweet.less";
+
+/*---------------------------- Icon Box -----------------------------*/
+
+@import "ct/iconBox.less";
+
+/*------------------------- Pricing Tables --------------------------*/
+
+@import "ct/pricingTables.less";
+
+/*--------------------------- Progress Bar --------------------------*/
+
+@import "ct/progressBar.less";
+
+/*----------------------------- Counters ----------------------------*/
+
+@import "mb-comingsoon.less";
+@import "ct/counters.less";
+
+
+
+
+
+
+
+/* Default Style*/
+
+html{
+  -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: scrollbar;
+}
+
+body{
+  background-color: #ffffff;
+
+  &.ct-maintence-page{
+    background-image: url(@bodyBG);
+    background-repeat: no-repeat;
+    background-position: left -44px;
+    //overflow: hidden;
+  }
+}
+
+img, iframe, video{
+  max-width: 100%;
+}
+
+img, video{
+  height: auto;
+}
+
+.jp-jplayer{
+  max-width: 100%;
+  height: auto !important;
+}
+
+// Animations // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.cssAnimate .animated{ .ct-m-opacity(0)}
+.cssAnimate .activate{  .ct-m-opacity(1)}
+
+#ct-js-wrapper{
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.ct-mainHeader{
+
+  background-image: url(@bodyBG);
+  background-repeat: no-repeat;
+}
+
+
+.navbar-scroll-top {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+
+
+.ct-imagedata{
+  background-image: url(@dataBG);
+  background-size: 100% 100%;
+  background-position: 0;
+  background-repeat: no-repeat;
+
+  width: 5.357rem;
+  height: 7.071rem;
+
+  position: absolute;
+  top: 0;
+
+  text-align: center;
+
+
+  .ct-imagedata-day{
+    color: #ffffff;
+    font-size: 2.643rem;
+    font-weight: 400;
+    display: block;
+
+    margin-top: 0.167em;
+  }
+
+  .ct-imagedata-month{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.143rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+  }
+
+  &.ct-imagedata--left{
+    left: 0;
+  }
+
+  &.ct-imagedata--right{
+    right: 0;
+  }
+
+  &.ct-imagedata--floatRight{
+    position: static;
+    float: right;
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+
+  &.ct-imagedata--floatLeft{
+    position: static;
+    float: right;
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+}
+
+
+.ct-preloader{
+  position:fixed;
+  z-index:999998;
+  width:100vw;
+  height:100vh;
+  background: #fff;
+  overflow:hidden;
+
+  .ct-preloader-content{
+    position:absolute;
+    z-index:99999;
+    top: 50%;
+    margin-top: -32px;
+    left: 50%;
+    margin-left: -32px;
+    overflow: visible;
+
+    width: 64px;
+    height: 64px;
+    font-size: 64px;
+    background: url("../images/preloader.GIF") no-repeat;
+  }
+}
+
+
+
+/*------------------------ to Top arrow -----------------------------*/
+
+.ct-js-btnScrollUp{
+
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+
+  width: 70px;
+  height: 70px;
+
+  z-index: 999999;
+
+  opacity: 0;
+  filter: alpha(opacity=70);
+
+  text-align: center;
+  padding-top: 15px;
+
+  color: #fff;
+
+  visibility: hidden;
+
+  .ct-m-transition(all, 1s, ease);
+
+  &.is-active{
+    opacity: 0.7;
+    visibility: visible;
+
+    &:hover{
+      color: @motive;
+      opacity: 1;
+      filter: alpha(opacity=100);
+    }
+  }
+  i{
+    font-size: 36px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: @backgroundYellow;
+  }
+}
+
+
+@media (max-width: @screen-lg){
+  .ct-imagedata{
+    width: 4.357rem;
+    height: 6.071rem;
+  }
+}
+
+.ct-link{
+  margin-bottom: 40px;
+
+  a{
+    text-decoration: none;
+    font-family: @fontFamily2;
+    font-size: 3.214rem;
+    color: #5e4c3e;
+
+    &:after{
+      font-family: fontawesome;
+      content: '\f178';
+      padding-left: 5px;
+    }
+
+    &:hover{
+      color: @motive;
+    }
+  }
+}
+
+//headroom styles for fixed headers and menus
+.headroom {
+  transition: transform 200ms linear;
+  z-index: 9998;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+  display: block;
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
+  display: none;
+}
+
+.ct-headroomNavFixed{
+  position: fixed;
+  z-index: 999;
+  top: -120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.maintenance .ct-mainHeader{
+  background-position: 0 -48px;
+}
+
+@import "ct/utilities.less";
+
+
+
+body.boxed, .ptn1, .ptn2, .ptn3, .ptn4, .ptn5, .ptn6, .ptn7, .ptn8, .ptn9, .ptn10, .ptn11, .ptn12, .ptn13{
+  #ct-js-wrapper{
+    max-width: 1200px;
+    margin: auto;
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    .ct-mainHeader{
+
+      .ct-topBar{
+        max-width: 1200px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+      }
+
+      .navbar.navbar-default{
+        max-width: 1200px;
+      }
+    }
+  }
+}
+
+.ptn1, .ptn2, .ptn3, .ptn4, .ptn5, .ptn6, .ptn7, .ptn8, .ptn9, .ptn10, .ptn11, .ptn12, .ptn13{
+  background-attachment: fixed !important;
+}
+
+.ptn1{
+  background: url("../images/bg_pattern_01.png") repeat;
+}
+
+.ptn2{
+  background: url("../images/bg_pattern_02.png") repeat;
+}
+
+.ptn3{
+  background: url("../images/bg_pattern_03.png") repeat;
+}
+
+.ptn4{
+  background: url("../images/bg_pattern_09.png") repeat;
+}
+
+.ptn5{
+  background: url("../images/bg_pattern_10.png") repeat;
+}
+
+.ptn6{
+  background: url("../images/bg_pattern_11.jpg") repeat;
+}
+
+.ptn7{
+  background: url("../images/bg_pattern_12.jpg") repeat;
+}
+
+.ptn8{
+  background: url("../images/bg_pattern_12.png") repeat;
+}
+

@@ -1,0 +1,161 @@
+@import "../../../assets/fonts/font-awesome-4.2.0/less/font-awesome.less";
+
+
+html{
+  font-size: 14px;
+}
+
+body{
+  font-size: inherit;
+  color: black;
+  font-family: @fontFamily1;
+}
+
+@media (max-width: @screen-xs){
+  html{
+    font-size: 12px;
+  }
+}
+
+
+body{
+  font-size: inherit;
+
+}
+*{
+  outline: none !important;
+}
+
+a{
+  .ct-m-transition(all, 0.2s, ease);
+
+  &:hover{
+
+  }
+}
+
+li a{
+  color: @motive;
+
+  &:hover, &:focus, &:active{
+    color: @colorBrown1;
+  }
+}
+.header{
+
+}
+
+header{
+  h1 + p{
+
+  }
+
+  h2 + p{
+
+  }
+
+  h3 + p{
+
+  }
+
+  h4 + p{
+
+  }
+
+  h5 + p{
+
+  }
+
+  h6 + p{
+
+  }
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+  font-weight: inherit;
+  color: inherit;
+  line-height: 1;
+  margin-top: 0;
+
+  small{
+    display: block;
+    line-height: 1;
+    color: inherit;
+    font-weight: inherit;
+  }
+}
+
+p{
+
+}
+
+h1, .h1{
+  font-size: 7.857rem; //110px
+  margin-bottom: 0.282em; //31px
+
+  small{
+    font-size: 0.857em;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: @screen-md){
+  h1, .h1 {
+    font-size: 4.1rem;
+  }
+}
+
+@media (max-width: 400px){
+  h1, .h1 {
+    font-size: 2rem;
+  }
+}
+
+h2, .h2{
+  font-size: 4.286rem; //60px
+  margin-bottom: 0.200em;
+
+  small{
+    font-size: 0.857em;
+    margin-bottom: 0.276em;
+  }
+}
+
+h3, .h3{
+  font-size: 3.1rem; //45px
+  margin-bottom: 0.160em;
+
+  small{
+    font-size: 0.857em;
+    margin-bottom: 1.111em;
+  }
+}
+
+h4, .h4{
+  font-size: 2.714rem; //38px
+  margin-bottom: 0.205em;
+
+  small{
+    font-size: 0.857em;
+    margin-bottom: 0;
+  }
+}
+
+h5, .h5{
+  font-size: 2.429rem; //34px
+  margin-bottom: 0.472em;
+  small{
+    font-size: 0.857em;
+    margin-bottom: 0.276em;
+  }
+}
+
+h6, .h6{
+  font-size: 1rem; //14px
+  margin-bottom: 0.276em;
+  small{
+    font-size: 0.857em;
+    margin-bottom: 0.714em;
+  }
+}
+

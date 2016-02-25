@@ -1,0 +1,66 @@
+.ct-pricingTable{
+  margin-bottom: 30px;
+
+  .ct-pricingTable-header{
+    position: relative;
+    background-color: @backgroundGreen;
+    text-align: center;
+
+    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+      padding: 30px 10px;
+      margin-bottom: 0;
+
+      span{
+        color: @colorWhite;
+        font-size: 0.917em;
+        font-family: @fontFamily2;
+      }
+    }
+
+    .ct-pricingTable-price{
+      position: absolute;
+      bottom: 10px;
+      right: 18px;
+
+      span{
+        font-size: 1.286rem;
+        color: @colorWhite;
+      }
+    }
+  }
+
+  .ct-pricingTable-container{
+    background-color: @backgroundGray2;
+
+    ul{
+      padding: 20px 0;
+
+      li{
+        padding-left: 4.286rem;
+
+        color: @colorGray8;
+        line-height: 3.42857;
+
+        &:before{
+          font-family: fontawesome;
+          content: '\f00d';
+          padding-right: 15px;
+
+          font-size: 1.2em;
+
+          color: @colorGray9;
+        }
+
+        &.active{
+
+          &:before{
+
+            content: '\f00c';
+
+            color: @colorYellow;
+          }
+        }
+      }
+    }
+  }
+}

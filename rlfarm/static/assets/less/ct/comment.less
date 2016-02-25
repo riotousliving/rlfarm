@@ -1,0 +1,168 @@
+.ct-comments{
+    margin-bottom: 40px;
+
+
+    .children{
+        list-style: none;
+        padding-left: 100px;
+    }
+
+    .ct-comment, .ct-subcomment{
+        margin-top: 25px;
+        border-bottom: 1px solid @borderColor3;
+
+        .ct-media{
+            padding-bottom: 25px;
+
+            .media-left{
+                width: 5.929rem;
+                a{
+                    img{
+                        max-width: none;
+                    }
+                }
+            }
+
+            .ct-media-body{
+                width: 100%;
+
+                .ct-media-bodyHeader{
+                    width: 100%;
+                    display: table;
+                    margin-bottom: 15px;
+
+                    .ct-media-body-title{
+                        display: table-cell;
+                        vertical-align: middle;
+
+                        div{
+                            color:  @colorGray1;
+                            font-weight: 400;
+                            display: block;
+
+                            a{
+                                color: inherit;
+
+                                .ct-media-heading{
+                                    font-weight: 600;
+                                    color: inherit;
+                                    display: inline-block;
+                                }
+
+                                &:hover, &:active, &:focus{
+                                    color: @motive;
+                                }
+                            }
+                        }
+                    }
+
+                    .ct-media-body-meta{
+                        display: table-cell;
+                        vertical-align: middle;
+                        text-align: right;
+
+                        ul{
+                            margin: 0;
+
+                            li{
+                                color: @motive;
+                                font-size: 0.929rem;
+
+                                time{
+                                    color: inherit;
+                                }
+
+                                a{
+                                    color: inherit;
+
+                                    &:hover, &:active, &:focus{
+                                        color:  @colorGray1;
+                                    }
+                                }
+
+                                &:after{
+                                    font-family: fontawesome;
+                                    content: '\f111';
+
+                                    font-size: 4px;
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    color: @motive;
+                                    margin-left: 10px;
+                                }
+
+                                &:last-child{
+                                    &:after{
+                                        content: '';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .ct-media-body-content{
+                    p{
+                        color:  @colorGray1;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        line-height: 1.71429;
+                    }
+                }
+            }
+        }
+    }
+
+    .ct-comment{
+        &:last-child{
+            border: 0;
+        }
+    }
+
+    .ct-subcomment{
+        padding-left: 100px;
+    }
+}
+
+
+@media (max-width: @screen-sm){
+    .ct-comments{
+        .ct-subcomment, .children{
+            padding-left: 15px;
+        }
+    }
+}
+
+@media (max-width: @screen-xs){
+    .ct-comments{
+        .ct-subcomment, .children{
+            padding-left: 15px;
+        }
+
+        .ct-comment, .ct-subcomment{
+            .ct-media{
+
+                .media-left{
+                    width: 4.1rem;
+                }
+
+                .ct-media-body{
+                    .ct-media-bodyHeader{
+                        .ct-media-body-meta{
+                            ul{
+                                li{
+                                    padding: 0;
+
+                                    &:after{
+                                        margin-left: 4px;
+                                        margin-right: 4px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,148 @@
+.ct-preFooter{
+  .ct-preFooter-mainList{
+    display: table;
+    width: 100%;
+
+    > li{
+      width: 19%;
+      padding: 0 0 20px 0;
+      vertical-align: top;
+
+      a{
+        color: @colorGray1;
+        line-height: 2.5;
+        text-decoration: none;
+
+        &:hover{
+          color: @motive;
+        }
+
+        i{
+          color: @motive;
+          margin-right: 5px;
+        }
+      }
+
+      .ct-footerDownload{
+        height: 240px;
+        width: 250px;
+
+        position: relative;
+
+        img{
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        .ct-footerDownload-header{
+          width: 55%;
+          float: right;
+
+          span{
+            font-family: @fontFamily2;
+            font-size: 0.933em;
+            color:  @colorGray1;
+            font-weight: 400;
+
+            span{
+              font-weight: 600;
+            }
+          }
+        }
+
+        .btn{
+          position: absolute;
+          bottom: 0;
+
+          left: 0;
+          right: 0;
+
+          margin-left: auto;
+          margin-right: auto;
+
+          line-height: 1;
+          width: 202px;
+
+          span{
+            font-size: 0.846em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ct-postFooter{
+  padding: 15px 0;
+  background-color: #99cd4d;
+}
+
+@media (max-width: @screen-lg){
+  .ct-preFooter {
+    .ct-preFooter-mainList {
+
+      > li {
+        width: 24%;
+
+        &:last-child{
+          width: 100%;
+
+          .ct-footerDownload{
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-sm){
+  .ct-preFooter {
+    .ct-preFooter-mainList {
+
+      > li {
+        width: 49%;
+        padding: 0 20px 30px;
+
+        &:last-child{
+          width: 100%;
+
+          .ct-footerDownload{
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .ct-postFooter{
+    > div{
+      > div{
+        > div{
+          display: block;
+          text-align: center;
+
+          p{
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: @screen-sm){
+  .ct-preFooter {
+    .ct-preFooter-mainList {
+
+      > li {
+        width: 100%;
+      }
+    }
+  }
+}

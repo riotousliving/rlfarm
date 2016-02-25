@@ -1,0 +1,60 @@
+.ct-twitter{
+  margin-top: 20px;
+  font-family: @fontFamily1;
+  font-weight: 400;
+
+  .tweet_even,
+  .tweet_odd{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 45px;
+    font-weight: 400;
+    overflow: hidden;
+    line-height: 1.79167;
+  }
+  > div{
+    p{
+      font-size: 1.714em;
+      position: relative;
+      a.tweet_user{
+        color: @motive;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      .tweet_text{
+        color:  #422106;
+
+        .at{
+          margin-right: 10px;
+        }
+
+        a{
+          color: @motive;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+      span.tweet_text,a.tweet_user{
+        font-style: italic;
+      }
+      span.tweet_time{
+        padding-top: 10px;
+        font-size: 1.143rem;
+        display: block;
+        text-align: center;
+        font-style: italic;
+        a{
+          color:  #422106;
+          &:hover{
+            color: @motive;
+          }
+        }
+      }
+      @media (max-width:479px){
+        font-size: 1.00em;
+      }
+    }
+  }
+}

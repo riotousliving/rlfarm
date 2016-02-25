@@ -1,0 +1,287 @@
+.table{
+  thead{
+    tr{
+      th{
+        color: @colorWhite;
+        font-size: 2.429rem;
+        font-weight: 700;
+        font-family: @fontFamily2;
+        text-align: center;
+        vertical-align: middle;
+        background-color: @backgroundGreen;
+        border: none;
+        padding: 7px 8px;
+      }
+    }
+  }
+
+  tbody{
+    tr{
+      background-color: @backgroundGreen1;
+
+      td{
+        font-size: 1rem;
+        font-weight: 400;
+        color: @colorGray8;
+        text-align: center;
+        vertical-align: middle;
+        border: none;
+        padding: 20px 8px;
+      }
+
+      &:first-child{
+        td{
+          padding-top: 42px;
+        }
+      }
+
+      &:last-child{
+        td{
+          padding-bottom: 42px;
+        }
+      }
+    }
+  }
+
+  &.table-bordered{
+    thead{
+      tr{
+        th{
+          border: 1px solid @borderColor17 !important;
+        }
+      }
+    }
+
+    tbody{
+      tr{
+        td{
+          border: 1px solid @borderColor16;
+        }
+      }
+    }
+  }
+}
+
+
+
+.ct-table{
+  width: 100%;
+
+  .ct-cell-rotate-90{
+    .ct-m-rotation(-90deg);
+  }
+
+  thead{
+    tr{
+
+      th{
+
+        div{
+
+        }
+      }
+    }
+  }
+
+  tbody{
+    tr{
+      td{
+
+      }
+    }
+  }
+
+  &.ct-table--type1{
+    margin-bottom: 100px;
+
+    thead{
+      tr{
+        height: 125px;
+        th{
+          line-height: 1;
+
+          &:first-child{
+            div{
+              margin: 0 15px 0 0;
+              text-align: center;
+              font-size: 3.571rem;
+              font-family: @fontFamily2;
+              width: 230px;
+            }
+          }
+
+          div{
+            width: 65px;
+            margin-left: 10px;
+
+            color: @motive;
+            font-weight: 400;
+
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    tbody{
+      tr{
+        border: 15px solid @borderColor9;
+
+        td{
+          padding: 12px 7px;
+
+          .media{
+            .media-body{
+              padding-left: 5px;
+              padding-right: 10px;
+
+              .media-heading{
+                color:  @colorGray1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ct-table-check{
+  width: 2.571rem;
+  height: 2.571rem;
+
+  margin: 0 auto;
+
+  background-color: @backgroundYellow;
+}
+
+.ct-slick-table{
+  z-index: -10;
+  position: fixed;
+  top: -999999999999999999999999px;
+
+  .slick-prev, .slick-next{
+    top: 50% !important;
+    margin-top: -20px;
+  }
+}
+
+.ct-table-slider-item{
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .ct-table-slider-item-wrapperOuter{
+    margin-bottom: 40px;
+
+    .ct-table-slider-item-image-container{
+      margin-bottom: 30px;
+
+      img{
+
+      }
+    }
+
+    .ct-table-slider-item-wrapperInner{
+      .ct-table-slider-item-titleContainer{
+        .ct-table-slider-item-title{
+          text-align: center;
+
+          a{
+            text-decoration: none;
+
+            span{
+              font-family: @fontFamily2;
+              color: @motive;
+              font-weight: 400;
+
+              text-transform: uppercase;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  table{
+    width: 100%;
+
+    tbody{
+      tr{
+        line-height: 4;
+        border: 1px solid @borderColor9;
+
+        th{
+          width: 25%;
+          color: @motive;
+          font-weight: 400;
+          border-right: 1px solid @borderColor9;
+
+          text-transform: uppercase;
+          padding-left: 10px;
+        }
+
+        td{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: @screen-lg){
+  .ct-table{
+    &.ct-table--type1{
+
+      thead{
+        tr{
+          th{
+
+            div{
+              width: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-md){
+  .ct-table{
+    &.ct-table--type1{
+
+      thead{
+        tr{
+          th{
+
+            &:first-child{
+              div{
+                font-size: 2.571rem;
+                width: 100px;
+              }
+            }
+          }
+        }
+      }
+
+      tbody{
+        tr{
+          td{
+
+            .media{
+              .media-left{
+                padding-right: 0;
+              }
+
+              .media-body{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,217 @@
+.widget{
+  margin-bottom: 50px;
+  padding-left: 20px;
+
+  .widget-inner{
+    .ct-widget-header{
+      border-bottom: 1px solid @borderColor10;
+      padding-bottom: 22px;
+      margin-bottom: 20px;
+
+      span{
+        font-family: @fontFamily1;
+        color:  @colorBrown2;
+        font-weight: 600;
+        font-size: 1.143em;
+        text-transform: uppercase;
+      }
+    }
+
+    .ct-widget-content{
+
+    }
+  }
+
+  &.ct-widget-searcher{
+    .ct-widget-content{
+      form{
+        .input-group{
+          position: relative;
+          width: 100%;
+
+          .form-control{
+            height: 48px;
+            padding-right: 50px;
+            .ct-m-boxShadow(none);
+            .ct-m-rounded(0);
+
+            &::-webkit-input-placeholder {
+              color:  @colorGray6;
+            }
+            &:-moz-placeholder {
+              color:  @colorGray6;
+            }
+            &::-moz-placeholder {
+              color:  @colorGray6;
+            }
+            &:-ms-input-placeholder {
+              color:  @colorGray6;
+            }
+
+            border-color: @borderColor11;
+
+            .ct-m-transition(all, .3s, ease);
+
+            &:focus, &:active{
+              border-color: @borderColorFocus;
+            }
+          }
+
+          .input-group-btn{
+            position: absolute;
+            top: 1px;
+            right: 1px;
+
+            height: 46px;
+            width: 46px;
+
+            z-index: 2;
+
+            .btn{
+              padding-left: 0;
+              padding-right: 0;
+
+              height: 100%;
+              width: 100%;
+
+              border: none;
+              background-color: transparent;
+
+              i{
+                font-size: 17px;
+                color: @borderColor12;
+                display: block;
+                line-height: 17px;
+
+                .ct-m-transition(all, .3s, ease);
+              }
+
+              &:hover, &:active, &:focus{
+                .ct-m-boxShadow(none);
+
+                i{
+                  color: @colorYellow;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ct-widget-links{
+    .ct-widget-content{
+      ul{
+        li{
+          i{
+            margin-right: 10px;
+            color: @motive;
+          }
+          a{
+            font-weight: 400;
+            color:  @colorBrown2;
+            font-size: 1.071rem;
+            line-height: 2.33333;
+            text-decoration: none;
+            .ct-m-transition(all, .3s, ease);
+
+            &:hover{
+              color: @motive;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ct-widget-recentPost{
+    .ct-widget-content{
+
+    }
+  }
+
+  &.ct-widget-tags{
+    .ct-widget-content{
+      ul{
+        li{
+          padding: 0;
+
+          a{
+            margin-bottom: 10px;
+            margin-left: 5px;
+
+            padding: 5px 10px;
+            color:  @colorBrown2;
+            font-weight: 400;
+            text-decoration: none;
+            display: inline-block;
+
+            border: 1px solid @borderColor13;
+
+            .ct-m-transition(all, .3s, ease);
+
+            &:hover, &:active, &:focus{
+              border-color: @motive;
+              color: @motive;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ct-widget-latestComments{
+    .ct-widget-header{
+      margin-bottom: 10px;
+    }
+
+    .ct-widget-content{
+      ul{
+        li{
+          color:  @colorBrown2;
+          font-weight: 400;
+          line-height: 2.5;
+
+          i{
+            font-size: 4px;
+            display: inline-block;
+            margin-right: 13px;
+            vertical-align: middle;
+            color: @motive;
+          }
+
+          a{
+            text-decoration: none;
+
+            .ct-m-transition(all, .3s, ease);
+          }
+
+          .ct-widget-author{
+            color:  @colorBrown2;
+
+            &:hover, &:active, &:focus{
+              color: @motive;
+            }
+          }
+
+          .ct-widget-article{
+            color: @motive;
+
+            &:hover, &:active, &:focus{
+              color:  @colorBrown2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-sm){
+  .widget{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 320px;
+  }
+}
