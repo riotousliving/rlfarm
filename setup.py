@@ -22,7 +22,7 @@ requires = [
     ]
 
 setup_requires = [
-    'pytest',
+    'pytest-runner',
 ]
 
 tests_require = [

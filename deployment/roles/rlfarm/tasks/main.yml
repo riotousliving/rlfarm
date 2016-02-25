@@ -1,4 +1,7 @@
 ---
+- name: install sudoers for rlfarm user
+  template: src=templates/9999-ansible-rlfarm.j2 dest=/etc/sudoers.d/9999-ansible-rlfarm mode=0440 owner=root group=root
+
 - name: create user
   user: name="{{ username }}" state=present
 
@@ -44,19 +47,21 @@
   become: true
   become_user: "{{ username }}"
 
-- stat: path=~/pid_5000.pid
-  register: pid
+- name: install supervisord
+  shell: pip install supervisor
+
+- name: install supervisord conf
+  template: src=templates/supervisord.conf.j2 dest=/home/{{ username }}/supervisord.conf
   become: true
   become_user: "{{ username }}"
 
-- name: stop uwsgi
-  shell: ~/env/bin/uwsgi --stop "{{ pid.stat['path'] }}"
-  when: not pid|failed
-  become: true
-  become_user: "{{ username }}"
+- stat: path=/tmp/supervisord.pid
+  register: spid
 
-- name: start uwsgi
-  shell: ~/env/bin/uwsgi --ini-paste-logged ~/production.ini
-  become: true
-  become_user: "{{ username }}"
+- name: restart supervisord
+  shell: kill -HUP `cat /tmp/supervisord.pid`
+  when: spid.stat.exists
 
+- name: start supervisord
+  shell: supervisord -c /home/{{ username }}/supervisord.conf
+  when: not spid.stat.exists

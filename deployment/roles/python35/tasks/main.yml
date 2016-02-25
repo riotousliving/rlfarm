@@ -8,7 +8,7 @@
   shell: add-apt-repository -y ppa:fkrull/deadsnakes
 
 - name: install system python packages
-  apt: name={{ item }} update_cache=yes state=latest cache_valid_time=86400
+  apt: name={{ item }} update_cache=yes state=latest
   with_items:
       - python3.5
       - python3.5-dev

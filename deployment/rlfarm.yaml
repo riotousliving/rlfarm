@@ -1,10 +1,10 @@
 ---
-- hosts: db
+- hosts: tag_db
   roles:
       - role: postgres
         dbname: rlfarm
 
-- hosts: app
+- hosts: tag_app
   roles:
       - role: python35
 

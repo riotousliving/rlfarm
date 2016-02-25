@@ -23,12 +23,15 @@
 - name: restart service
   service: name=postgresql state=restarted enabled=yes
 
-- name: setup db '{{ dbname }}'
+- name: install postgres sudo file
+  template: src=templates/9999-ansible-postgres.j2 dest=/etc/sudoers.d/9999-ansible-postgres mode=0440 owner=root group=root
+
+- name: create db '{{ dbname }}'
   postgresql_db: name={{ dbname }} state=present
   become_user: postgres
   become: true
 
-- name: create db user '{{ dbuser.stdout }}'
+- name: create db user
   postgresql_user:
       db='{{ dbname }}'
       name='{{ dbuser.stdout }}'

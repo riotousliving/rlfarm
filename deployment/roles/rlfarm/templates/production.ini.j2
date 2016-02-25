@@ -13,8 +13,8 @@ harakiri-verbose = true
 limit-post = 65536
 post-buffering = 8192
 
-daemonize = ./uwsgi.log
-pidfile = ./pid_5000.pid
+daemonize = /home/{{ username }}/uwsgi.log
+pidfile = /home/{{ username }}/uwsgi.pid
 
 listen = 128
 
@@ -39,9 +39,11 @@ pyramid.default_locale_name = en
 pyramid.includes =
     pyramid_tm
 
-{% for host in groups['db'] %}
-{% if hostvars[host]['postgres_master'] %}
+{% for host in groups['tag_db'] %}
+{% if 'postgres_master' in hostvars[host] and hostvars[host]['postgres_master'] %}
 sqlalchemy.url = postgresql+psycopg2://{{ hostvars[host]['dbuser']['stdout'] }}:{{ hostvars[host]['dbpass']['stdout'] }}@{{ host }}:{{ hostvars[host]['dbport'] }}/{{ hostvars[host]['dbname'] }}
+{% elif 'gce_metadata' in hostvars[host] and 'postgres_master' in hostvars[host]['gce_metadata'] %}
+sqlalchemy.url = postgresql+psycopg2://{{ hostvars[host]['dbuser']['stdout'] }}:{{ hostvars[host]['dbpass']['stdout'] }}@{{ hostvars[host]['gce_private_ip'] }}:{{ hostvars[host]['dbport'] }}/{{ hostvars[host]['dbname'] }}
 {% endif %}
 {% endfor %}
 
