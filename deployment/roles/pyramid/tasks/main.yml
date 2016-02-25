@@ -1,6 +1,6 @@
 ---
-- name: install sudoers for rlfarm user
-  template: src=templates/9999-ansible-rlfarm.j2 dest=/etc/sudoers.d/9999-ansible-rlfarm mode=0440 owner=root group=root
+- name: install sudoers for {{ app_name }} user
+  template: src=templates/9999-ansible-app.j2 dest=/etc/sudoers.d/9999-ansible-{{ app_name }} mode=0440 owner=root group=root
 
 - name: create user
   user: name="{{ username }}" state=present
@@ -20,8 +20,8 @@
   become: true
   become_user: "{{ username }}"
 
-- name: install rlfarm from github
-  shell: ~/env/bin/pip install https://github.com/wwitzel3/rlfarm/archive/master.zip
+- name: install {{ app_name }} using {{ pip_package }}
+  shell: ~/env/bin/pip install {{ pip_package }}
   become: true
   become_user: "{{ username }}"
 
@@ -36,7 +36,7 @@
   become_user: "{{ username }}"
 
 - name: initialize_db
-  shell: ~/env/bin/initialize_rlfarm_db ~/production.ini
+  shell: ~/env/bin/initialize_{{ app_name }}_db ~/production.ini
   become: true
   become_user: "{{ username }}"
   when: db_initialized.stat['exists'] == False

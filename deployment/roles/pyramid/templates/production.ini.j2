@@ -2,34 +2,27 @@
 # app configuration
 # http://docs.pylonsproject.org/projects/pyramid/en/1.6-branch/narr/environment.html
 ###
+
 [uwsgi]
-socket = /tmp/uwsgi.sock
 master = true
-
+home = /home/{{ username }}/env
+socket = /tmp/uwsgi.sock
 processes = 4
-
 harakiri = 60
 harakiri-verbose = true
 limit-post = 65536
 post-buffering = 8192
-
-daemonize = /home/{{ username }}/uwsgi.log
-pidfile = /home/{{ username }}/uwsgi.pid
-
 listen = 128
-
 max-requests = 1000
-
 reload-on-as = 128
 reload-on-rss = 96
 no-orphans = true
-
 log-slow = true
-
 virtualenv = /home/{{ username }}/env
+chmod-socket = 666
 
 [app:main]
-use = egg:rlfarm
+use = egg:{{ app_name }}
 
 pyramid.reload_templates = false
 pyramid.debug_authorization = false
@@ -58,7 +51,7 @@ port = 6543
 ###
 
 [loggers]
-keys = root, rlfarm, sqlalchemy
+keys = root, {{ app_name }}, sqlalchemy
 
 [handlers]
 keys = console
@@ -70,10 +63,10 @@ keys = generic
 level = WARN
 handlers = console
 
-[logger_rlfarm]
+[logger_{{ app_name }}]
 level = WARN
 handlers =
-qualname = rlfarm
+qualname = {{ app_name }}
 
 [logger_sqlalchemy]
 level = WARN

@@ -8,8 +8,10 @@
   roles:
       - role: python35
 
-      - role: rlfarm
+      - role: pyramid
+        app_name: rlfarm
         username: webapp
+        pip_package: https://github.com/wwitzel3/rlfarm/archive/master.zip
 
       - role: nginx
         nginx_events_params:
@@ -22,4 +24,4 @@
                 - listen 80
                 - server_name rlfarm.com
                 - location / { uwsgi_pass unix:///tmp/uwsgi.sock; include uwsgi_params; }
-                - location /static { root /home/webapp/env/lib/python3.5/site-packages/rlfarm/static; expires 30d; add_header Cache-Control public; access_log off; }
+                - location /static/ { alias /home/webapp/env/lib/python3.5/site-packages/rlfarm/static/; expires 30d; add_header Cache-Control public; access_log off; }
