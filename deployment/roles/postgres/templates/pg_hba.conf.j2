@@ -71,8 +71,14 @@
 # "host" records.  In that case you will also need to make PostgreSQL
 # listen on a non-local interface via the listen_addresses
 # configuration parameter, or via the -i or -h command line switches.
+#
+
 {% for host in groups['tag_app'] %}
+{% if 'gce_metadata' in hostvars[host] %}
 host    {{ dbname }}             {{ dbuser['stdout'] }}             {{ hostvars[host]['gce_private_ip'] }}/32            md5
+{% else %}
+host    {{ dbname }}             {{ dbuser['stdout'] }}             {{ host }}/32            md5
+{% endif %}
 {% endfor %}
 
 
