@@ -29,3 +29,4 @@
                 - server_name {{ domain }}
                 - location / { uwsgi_pass unix:///tmp/uwsgi.sock; include uwsgi_params; }
                 - location /static/ { alias /home/{{ username }}/env/lib/python3.5/site-packages/{{ app_name }}/static/; expires 30d; add_header Cache-Control public; access_log off; }
+                - location /assets/ { alias /home/{{ username }}/env/lib/python3.5/site-packages/{{ app_name }}/static/assets/; expires 30d; add_header Cache-Control public; access_log off; }
