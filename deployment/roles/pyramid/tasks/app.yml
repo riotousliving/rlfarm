@@ -1,0 +1,46 @@
+---
+- name: install {{ app_name }} using {{ pip_package }}
+  shell: ~/env/bin/pip install {{ pip_package }}
+  become: true
+  become_user: "{{ username }}"
+  tags:
+      - app_only
+
+- name: render production.ini
+  template: src=templates/production.ini.j2 dest=~/production.ini
+  become: true
+  become_user: "{{ username }}"
+
+- stat: path=~/.db_initialized
+  register: db_initialized
+  become: true
+  become_user: "{{ username }}"
+
+- name: initialize_db
+  shell: ~/env/bin/initialize_{{ app_name }}_db ~/production.ini
+  become: true
+  become_user: "{{ username }}"
+  when: db_initialized.stat['exists'] == False
+
+- name: .db_initialized
+  file: path=~/.db_initialized state=touch
+  when: db_initialized.stat['exists'] == False
+  become: true
+  become_user: "{{ username }}"
+
+- stat: path=/tmp/supervisord.pid
+  register: spid
+  tags:
+      - app_only
+
+- name: restart supervisord
+  shell: kill -HUP `cat /tmp/supervisord.pid`
+  when: spid.stat.exists
+  tags:
+      - app_only
+
+- name: start supervisord
+  shell: supervisord -c /home/{{ username }}/supervisord.conf
+  when: not spid.stat.exists
+  tags:
+      - app_only

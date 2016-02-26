@@ -18,6 +18,8 @@
       - role: pyramid
 
       - role: nginx
+        tags:
+            - nginx
         nginx_events_params:
             - worker_connections 512
             - debug_connection 127.0.0.1

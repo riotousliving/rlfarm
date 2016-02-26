@@ -1,0 +1,9 @@
+---
+- name: install supervisord
+  shell: pip install supervisor
+
+- name: install supervisord conf
+  template: src=templates/supervisord.conf.j2 dest=/home/{{ username }}/supervisord.conf
+  become: true
+  become_user: "{{ username }}"
+

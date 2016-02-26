@@ -1,0 +1,16 @@
+---
+- name: remove existing venv
+  file: path=~/env state=absent
+  become: true
+  become_user: "{{ username }}"
+
+- name: create py35 virtual env
+  shell: virtualenv -p python3.5 ~/env
+  become: true
+  become_user: "{{ username }}"
+
+- name: install uwsgi
+  shell: ~/env/bin/pip install uwsgi
+  become: true
+  become_user: "{{ username }}"
+

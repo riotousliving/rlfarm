@@ -1,0 +1,7 @@
+---
+- name: install sudoers for {{ app_name }} user
+  template: src=templates/9999-ansible-app.j2 dest=/etc/sudoers.d/9999-ansible-{{ app_name }} mode=0440 owner=root group=root
+
+- name: create user
+  user: name="{{ username }}" state=present
+
