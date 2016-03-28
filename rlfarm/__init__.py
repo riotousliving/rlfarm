@@ -16,6 +16,8 @@ def main(global_config, **settings):
     config = Configurator(settings=settings)
     config.include('pyramid_mako')
     config.add_static_view('static', 'static', cache_max_age=3600)
+    config.add_static_view('assets', 'static/assets', cache_max_age=3600)
     config.add_route('homepage', '/')
+    config.add_route('contact_us', '/contact-us')
     config.scan()
     return config.make_wsgi_app()
