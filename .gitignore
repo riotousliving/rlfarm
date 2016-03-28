@@ -66,3 +66,5 @@ target/
 token.txt
 gce.ini
 gce.pem
+private.key
+cert.key
