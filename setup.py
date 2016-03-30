@@ -20,7 +20,11 @@ requires = [
     'waitress',
     'psycopg2',
     'stripe',
-    ]
+]
+
+links = [
+    "git+https://github.com/wwitzel3/pyramid_stripe.git#egg=pyramid_stripe",
+]
 
 setup_requires = [
     'pytest-runner',
@@ -50,6 +54,7 @@ setup(name='rlfarm',
       zip_safe=False,
       test_suite='rlfarm',
       install_requires=requires,
+      dependency_links = links,
       setup_requires=setup_requires,
       tests_require=tests_require,
       entry_points="""\
