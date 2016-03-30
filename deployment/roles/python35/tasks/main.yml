@@ -3,6 +3,7 @@
   apt: name={{ item }} update_cache=yes state=latest cache_valid_time=86400
   with_items:
       - software-properties-common
+      - git
 
 - name: add deadsnakes apt-repo
   shell: add-apt-repository -y ppa:fkrull/deadsnakes
