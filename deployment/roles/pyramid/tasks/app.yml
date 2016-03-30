@@ -1,6 +1,6 @@
 ---
 - name: install {{ app_name }} using {{ pip_package }}
-  shell: ~/env/bin/pip install -U --force-reinstall {{ pip_package }}
+  shell: ~/env/bin/pip install -U --force-reinstall --process-dependency-links {{ pip_package }}
   become: true
   become_user: "{{ username }}"
   tags:
