@@ -280,7 +280,6 @@
 <script src="assets/plugins/slick/init.js"></script>
 
 <script src="assets/twitter/js/jquery.tweet.js"></script>
-<script src="assets/form/js/contact-form.js"></script>
 
 <script src="assets/js/ct-mediaSection/jquery.stellar.min.js"></script>
 <script src="assets/js/ct-mediaSection/init.js"></script>

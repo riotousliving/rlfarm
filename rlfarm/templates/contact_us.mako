@@ -452,3 +452,7 @@
         </section>
     </div>
 </section>
+
+<%block name="extra_script">
+<script src="assets/form/js/contact-form.js"></script>
+</%block>

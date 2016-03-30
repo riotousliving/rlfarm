@@ -229,20 +229,24 @@
                     <strong>Danger!</strong> You did something wrong
                 </div>
 
-                <form class="validateIt" role="form" action="assets/form/send.php" method="POST">
-                    <div class="row">
+				<!-- Begin MailChimp Signup Form -->
+				<form action="//rlfarm.us13.list-manage.com/subscribe/post?u=7a6f1861fe6e0064fb4c30806&amp;id=44522abf0b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<div class="row" id="mc_embed_signup">
                         <div class="col-md-9">
                             <div class="form-group">
-                                <label class="sr-only" for="newsletter-email">Your Email Address</label>
-                                <input type="email" class="form-control ct-input--type1" id="newsletter-email" placeholder="Your Email Address" required="" name="field[]">
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <button type="submit" class="btn btn-block ct-btn-default btn-default"><span>Subscribe Today</span></button>
-                        </div>
-                    </div>
-                </form>
+								<label class="sr-only" for="mce-EMAIL">Your Email Address </label>
+								<input type="email" value="" name="EMAIL" class="form-control ct-input--type1 required email" id="mce-EMAIL" placeholder="Your Email Address" required/>
+							</div>
+						</div>
 
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7a6f1861fe6e0064fb4c30806_44522abf0b" tabindex="-1" value=""></div>
+		
+						<div class="col-md-3">
+							<button type="submit" class="btn btn-block ct-btn-default btn-default" id="mc-embedded-subscribe" name="subscribe"><span>Subscribe Today</span></button>
+						</div>
+                    </div>
+				</form>
+				<!--End mc_embed_signup-->
             </div>
         </div><!-- /container -->
     </div>
