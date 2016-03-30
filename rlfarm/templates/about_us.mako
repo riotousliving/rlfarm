@@ -121,7 +121,7 @@
         <div class="ct-infoBox ct-infoBox--type1">
             <div class="ct-infoBox-media ct-infoBox-media--left">
                 <figure>
-                    <img class="ct-infoBox-image--square" src="assets/images/content/aboutimage1.png" alt="">
+                    <img class="ct-infoBox-image--square" src="assets/images/content/aboutimage2.png" alt="">
                 </figure>
             </div>
 
@@ -175,7 +175,7 @@
         <div class="ct-infoBox ct-infoBox--type1">
             <div class="ct-infoBox-media ct-infoBox-media--right">
                 <figure>
-                    <img class="ct-infoBox-image--square" src="assets/images/content/aboutimage2.png" alt="">
+                    <img class="ct-infoBox-image--square" src="assets/images/content/aboutimage3.png" alt="">
                 </figure>
             </div>
 
