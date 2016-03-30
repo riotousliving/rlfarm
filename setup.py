@@ -11,7 +11,7 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
 requires = [
     'pyramid',
     'pyramid_mako',
-    'pyramid_stripe',
+    'pyramid_stripe==0.1',
     'pyramid_debugtoolbar',
     'pyramid_tm',
     'SQLAlchemy',
@@ -23,7 +23,7 @@ requires = [
 ]
 
 links = [
-    "git+https://github.com/wwitzel3/pyramid_stripe.git#egg=pyramid_stripe",
+    "git+https://github.com/wwitzel3/pyramid_stripe.git#egg=pyramid_stripe-0.1",
 ]
 
 setup_requires = [
