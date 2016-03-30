@@ -3,7 +3,7 @@
 <div class="container">
 
     <div class="ct-breadcrumbs-container">
-        <div class="ct-breadcrumbs ct-js-breadcrumbs" data-bg-image="assets/images/content/breadcrumbs4.png" data-bg-scratchImage="assets/images/scratch.png" data-height="260">
+        <div class="ct-breadcrumbs ct-js-breadcrumbs" data-bg-image="assets/images/content/breadcrumbs2.png" data-bg-scratchImage="assets/images/scratch.png" data-height="260">
             <div class="ct-breadcrumbs-title">
                 csa signup details
             </div>
