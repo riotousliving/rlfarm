@@ -15,9 +15,12 @@ def main(global_config, **settings):
     Base.metadata.bind = engine
     config = Configurator(settings=settings)
     config.include('pyramid_mako')
+    config.include('pyramid_stripe')
     config.add_static_view('static', 'static', cache_max_age=3600)
     config.add_static_view('assets', 'static/assets', cache_max_age=3600)
     config.add_route('homepage', '/')
+    config.add_route('csa_founder_signup', '/csa-founder-signup')
     config.add_route('contact_us', '/contact-us')
+    config.add_route('process', '/process')
     config.scan()
     return config.make_wsgi_app()

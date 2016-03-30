@@ -46,82 +46,6 @@
 <div class="ct-menuMobile">
     <ul class="ct-menuMobile-navbar list-unstyled ct-u-backgroundDarkGray">
         <li ${'class=active' if view.__name__ == "homepage" else ""}><a href="/">Home</a></li>
-
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About Farm Fresh <i class="fa fa-caret-down"></i></a>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="single-event.html">Single Event</a></li>
-                <li><a href="tours-and-events.html">Tours & Events</a></li>
-                <li><a href="single-person.html">Member Page</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="what-we-grow.html">What We Grow</a></li>
-            </ul>
-        </li>
-
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Our Products <i class="fa fa-caret-down"></i></a>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="single-product.html">Single Product</a></li>
-                <li><a href="our-products.html">Our Products</a></li>
-            </ul>
-        </li>
-
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Our Distributor <i class="fa fa-caret-down"></i></a>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="our-distributors.html">Our Distributors</a></li>
-                <li><a href="our-distributors2.html">Our Distributors 2</a></li>
-                <li><a href="our-suppliers.html">Our Suppliers</a></li>
-            </ul>
-        </li>
-
-        <li class="dropdown">
-            <a>Features <i class="fa fa-caret-down"></i></a>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="features-grid.html"><i class="fa fa-fw fa-th"></i> Grid System</a></li>
-                <li><a href="features-typography.html"><i class="fa fa-fw fa-font"></i> Typography</a></li>
-                <li><a href="features-buttons.html"><i class="fa fa-fw fa-link"></i> Buttons</a></li>
-                <li><a href="features-forms.html"><i class="fa fa-fw fa-align-justify"></i> Forms</a></li>
-                <li><a href="features-tables.html"><i class="fa fa-fw fa-table"></i> Tables</a></li>
-
-                <li><a href="features-p-tables.html"><i class="fa fa-fw fa-money"></i> Pricing Tables</a></li>
-                <li><a href="features-iconbox.html"><i class="fa fa-fw fa-th-large"></i> Icon Boxes</a></li>
-                <li><a href="features-personbox.html"><i class="fa fa-fw fa-users"></i> Person Boxes</a></li>
-                <li><a href="features-counters.html"><i class="fa fa-fw fa-plus"></i> Counters</a></li>
-                <li><a href="features-toggables.html"><i class="fa fa-fw fa-toggle-on"></i> Toggables</a></li>
-
-                <li><a href="features-charts.html"><i class="fa fa-fw fa-area-chart"></i> Charts</a></li>
-                <li><a href="features-p-bar.html"><i class="fa fa-fw fa-bars"></i> Progress Bars</a></li>
-                <li><a href="features-p-icons.html"><i class="fa fa-fw fa-star-half-full"></i> Progress Icons</a></li>
-                <li><a href="features-lists.html"><i class="fa fa-fw fa-list"></i> Lists Simple</a></li>
-                <li><a href="features-lists2.html"><i class="fa fa-fw fa-list"></i> Lists Icons</a></li>
-
-                <li><a href="features-slider.html"><i class="fa fa-fw fa-navicon"></i> Sliders</a></li>
-                <li><a href="features-m-sections.html"><i class="fa fa-fw fa-play"></i> Media Sections</a></li>
-                <li><a href="features-404.html"><i class="fa fa-exclamation-triangle"></i> 404 Page</a></li>
-                <li><a href="faq.html"><i class="fa fa-question"></i> FAQ</a></li>
-                <li><a href="maintenance.html"><i class="fa fa-pause"></i> Maintenance</a></li>
-            </ul>
-        </li>
-
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Gallery <i class="fa fa-caret-down"></i></a>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="gallery.html">Gallery - Type 1</a></li>
-                <li><a href="gallery2.html">Gallery - Type 2</a></li>
-            </ul>
-        </li>
-
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Blog <i class="fa fa-caret-down"></i></a>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="single-post.html">Single Post</a></li>
-                <li><a href="blog-list.html">Blog List</a></li>
-                <li><a href="blog-masonry.html">Blog Masonry</a></li>
-            </ul>
-        </li>
-
         <li ${'class=active' if view.__name__ == "contact_us" else ""}><a href="/contact-us">Contact Us</a></li>
     </ul>
 </div>
@@ -137,20 +61,14 @@
                         <div class="navbar-block-inner">
                             <ul class="socialicons socialicons--image">
                                 <li>
-                                    <a href="https://www.facebook.com/createITpl" data-toggle="tooltip" data-placement="bottom" title data-original-title="Facebook">
+                                    <a href="https://www.facebook.com/riotousliving.farm/" data-toggle="tooltip" data-placement="bottom" title data-original-title="Facebook">
                                         <i class="fa fa-facebook"></i>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://twitter.com/createitpl" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Twitter">
+                                    <a href="https://twitter.com/riotousliving" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Twitter">
                                         <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title data-original-title="LinkedIn">
-                                        <i class="fa fa-linkedin"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -182,101 +100,6 @@
 
                 <ul class="nav navbar-nav navbar-left ct-navbar--fadeInLeft">
                     <li ${'class=active' if view.__name__ == "homepage" else ""}><a href="/">Home</a></li>
-
-                    <li class="dropdown">
-                        <a href="about-us.html" class="dropdown-toggle">About Farm Fresh</a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="single-event.html">Single Event</a></li>
-                            <li><a href="tours-and-events.html">Tours & Events</a></li>
-                            <li><a href="single-person.html">Member Page</a></li>
-                            <li><a href="testimonials.html">Testimonials</a></li>
-                            <li><a href="what-we-grow.html">What We Grow</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="single-product.html" class="dropdown-toggle">Our Products</a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="single-product.html">Single Product</a></li>
-                            <li><a href="our-products.html">Our Products</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="our-distributors.html" class="dropdown-toggle">Our Distributor</a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="our-distributors.html">Our Distributors</a></li>
-                            <li><a href="our-distributors2.html">Our Distributors 2</a></li>
-                            <li><a href="our-suppliers.html">Our Suppliers</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown yamm-fw">
-                        <a href="features-grid.html" class="dropdown-toggle">Features</a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li class="yamm-outer">
-                                <div class="yamm-content">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <ul class="list-unstyled">
-                                                <li><a href="features-grid.html"><i class="fa fa-fw fa-th"></i> Grid System</a></li>
-                                                <li><a href="features-typography.html"><i class="fa fa-fw fa-font"></i> Typography</a></li>
-                                                <li><a href="features-buttons.html"><i class="fa fa-fw fa-link"></i> Buttons</a></li>
-                                                <li><a href="features-forms.html"><i class="fa fa-fw fa-align-justify"></i> Forms</a></li>
-                                                <li><a href="features-tables.html"><i class="fa fa-fw fa-table"></i> Tables</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <ul class="list-unstyled">
-                                                <li><a href="features-p-tables.html"><i class="fa fa-fw fa-money"></i> Pricing Tables</a></li>
-                                                <li><a href="features-iconbox.html"><i class="fa fa-fw fa-th-large"></i> Icon Boxes</a></li>
-                                                <li><a href="features-personbox.html"><i class="fa fa-fw fa-users"></i> Person Boxes</a></li>
-                                                <li><a href="features-counters.html"><i class="fa fa-fw fa-plus"></i> Counters</a></li>
-                                                <li><a href="features-toggables.html"><i class="fa fa-fw fa-toggle-on"></i> Toggables</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <ul class="list-unstyled">
-                                                <li><a href="features-charts.html"><i class="fa fa-fw fa-area-chart"></i> Charts</a></li>
-                                                <li><a href="features-p-bar.html"><i class="fa fa-fw fa-bars"></i> Progress Bars</a></li>
-                                                <li><a href="features-p-icons.html"><i class="fa fa-fw fa-star-half-full"></i> Progress Icons</a></li>
-                                                <li><a href="features-lists.html"><i class="fa fa-fw fa-list"></i> Lists Simple</a></li>
-                                                <li><a href="features-lists2.html"><i class="fa fa-fw fa-list"></i> Lists Icons</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <ul class="list-unstyled">
-                                                <li><a href="features-slider.html"><i class="fa fa-fw fa-navicon"></i> Sliders</a></li>
-                                                <li><a href="features-m-sections.html"><i class="fa fa-fw fa-play"></i> Media Sections</a></li>
-                                                <li><a href="features-404.html"><i class="fa fa-exclamation-triangle"></i> 404 Page</a></li>
-                                                <li><a href="faq.html"><i class="fa fa-question"></i> FAQ</a></li>
-                                                <li><a href="maintenance.html"><i class="fa fa-pause"></i> Maintenance</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="gallery.html#" class="dropdown-toggle">Gallery</a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="gallery.html">Gallery - Type 1</a></li>
-                            <li><a href="gallery2.html">Gallery - Type 2</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown ct-dropdownRight-lg">
-                        <a href="single-post.html" class="dropdown-toggle">Blog</a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="single-post.html">Single Post</a></li>
-                            <li><a href="blog-list.html">Blog List</a></li>
-                            <li><a href="blog-masonry.html">Blog Masonry</a></li>
-                        </ul>
-                    </li>
-
                     <li ${'class=active' if view.__name__ == "contact_us" else ""}><a href="/contact-us">Contact Us</a></li>
                 </ul>
 
@@ -465,6 +288,35 @@
 <script src="assets/js/headroom/init.js"></script>
 
 <script src="assets/js/main.min.js"></script>
-
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+    // This identifies your website in the createToken call below
+    Stripe.setPublishableKey('pk_test_pIKvFRQFnoggmQ0wteDaxT50');
+    var stripeResponseHandler = function(status, response) {
+      var $form = $('#payment-form');
+      if (response.error) {
+        // Show the errors on the form
+        $form.find('.errorMessage').text(response.error.message);
+        $form.find('button').prop('disabled', false);
+      } else {
+        // token contains id, last4, and card type
+        var token = response.id;
+        // Insert the token into the form so it gets submitted to the server
+        $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+        // and re-submit
+        $form.get(0).submit();
+      }
+    };
+    jQuery(function($) {
+      $('#payment-form').submit(function(e) {
+        var $form = $(this);
+        // Disable the submit button to prevent repeated clicks
+        $form.find('button').prop('disabled', true);
+        Stripe.card.createToken($form, stripeResponseHandler);
+        // Prevent the form from submitting with the default action
+        return false;
+      });
+});
+</script>
 </body>
 </html>
