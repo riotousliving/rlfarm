@@ -40,6 +40,8 @@ sqlalchemy.url = postgresql+psycopg2://{{ hostvars[host]['dbuser']['stdout'] }}:
 {% endif %}
 {% endfor %}
 
+stripe.api_key = CHANGEME
+
 [server:main]
 use = egg:waitress#main
 host = 0.0.0.0
