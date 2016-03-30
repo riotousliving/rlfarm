@@ -17,3 +17,4 @@ PyYAML==3.11
 requests==2.9.1
 six==1.10.0
 wheel==0.29.0
+-e git+https://github.com/wwitzel3/pyramid_stripe.git#egg=pyramid_stripe
