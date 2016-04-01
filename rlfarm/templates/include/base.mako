@@ -93,7 +93,7 @@
                 </form>
 
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="${request.route_url('homepage')}">
                         <img alt="Brand" src="assets/images/content/logo.png" />
                     </a>
                 </div>
@@ -114,156 +114,11 @@
     </main>
 
     <footer>
-        <div class="ct-preFooter ct-u-backgroundGray ct-u-paddingTop70 ct-u-paddingBottom15">
-            <div class="container">
-                <ul class="ct-preFooter-mainList list-unstyled list-inline">
-                    <li>
-                        <h6 class="ct-u-marginBottom30"><span class="ct-u-colorGray text-uppercase ct-fw-600">My Account</span></h6>
-
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> My Account
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Account login
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Email Sign Up
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> My Set & Save
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Refer Friends Now
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <h6 class="ct-u-marginBottom30"><span class="ct-u-colorGray text-uppercase ct-fw-600">customer service</span></h6>
-
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Help & FAQ
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Live Chat
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Request a Product
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Product Recalls
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <h6 class="ct-u-marginBottom30"><span class="ct-u-colorGray text-uppercase ct-fw-600">ways to shop</span></h6>
-
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Coupons & Discounts
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Free Samples
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Mobile
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Come To Store
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <h6 class="ct-u-marginBottom30"><span class="ct-u-colorGray text-uppercase ct-fw-600">company info</span></h6>
-
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> About Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Our Online Store
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Careers opportunity
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Privaty Police
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-long-arrow-right"></i> Site Map
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <div class="ct-footerDownload">
-                            <img src="assets/images/content/footerDownloadImage.png" alt=""/>
-                            <div class="ct-footerDownload-header">
-                                <h3><span>We Have Our <span>Own App</span></span></h3>
-                            </div>
-
-                            <div class="text-center">
-                                <a class="btn btn-lg ct-btn-image btn-motive" href="#"><span>Download Now</span></a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
         <div class="ct-postFooter">
             <div class="container">
                 <div class="ct-u-displayTableVertical">
-                    <div class="ct-u-displayTableCell text-left">
+                    <div class="ct-u-displayTableCell text-center">
                         <p class="ct-u-marginBoth0 ct-u-colorWhite">© 2016 Riotous Living, LLC. All Rights Reserved.</p>
-                    </div>
-
-                    <div class="ct-u-displayTableCell text-right">
-                        <ul class="list-unstyled list-inline ct-u-marginBoth0">
-                            <li><img src="assets/images/content/cart1.jpg" alt=""/></li>
-                            <li><img src="assets/images/content/cart2.jpg" alt=""/></li>
-                            <li><img src="assets/images/content/cart3.jpg" alt=""/></li>
-                            <li><img src="assets/images/content/cart4.jpg" alt=""/></li>
-                        </ul>
                     </div>
                 </div>
             </div>
