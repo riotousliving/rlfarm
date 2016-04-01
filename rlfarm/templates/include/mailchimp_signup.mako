@@ -4,8 +4,8 @@
             <div class="ct-newsletter">
                 <div class="text-center">
                     <header>
-                        <h2><span class="ct-u-colorBrownDark ct-u-ff--2 text-lowercase"><span class="ct-u-colorMotive text-capitalize">Why We Love Us?</span> Subscribe To Us!</span></h2>
-                        <h6><span class="ct-u-colorGray ct-u-ff--1">We are developing the most innovative, nutritious, free-form and organic foods ever. The futre of health food is right here.</span></h6>
+                        <h2><span class="ct-u-colorBrownDark ct-u-ff--2 text-lowercase"><span class="ct-u-colorMotive text-capitalize">Want To Receive Updates?</span> Subscribe!</span></h2>
+                        <h6><span class="ct-u-colorGray ct-u-ff--1">We will be sending farm updates, pictures, and recipes.</span></h6>
                     </header>
                 </div>
 				<!-- Begin MailChimp Signup Form -->
