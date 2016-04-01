@@ -1,3 +1,4 @@
+import pyramid.httpexceptions as exc
 from pyramid.view import view_config
 
 
@@ -29,9 +30,14 @@ def csa_founder_signup(request):
             currency="usd",
             customer=customer.id,
         )
+        raise exc.HTTPFound(request.route_url("signup_success"))
     return {}
 
 
-@view_config(route_name='process', request_method='POST')
+@view_config(route_name='stripe_process', request_method='POST')
 def process_stripe(request):
+    return {}
+
+@view_config(route_name='signup_success', renderer='templates/success.mako')
+def success(request):
     return {}
