@@ -45,8 +45,8 @@
 
 <div class="ct-menuMobile">
     <ul class="ct-menuMobile-navbar list-unstyled ct-u-backgroundDarkGray">
-        <li ${'class=active' if view.__name__ == "homepage" else ""}><a href="/">Home</a></li>
-        <li ${'class=active' if view.__name__ == "contact_us" else ""}><a href="/contact-us">Contact Us</a></li>
+        <li ${'class=active' if view.__name__ == "homepage" else ""}><a href="${request.route_url('homepage')}">Home</a></li>
+        <li ${'class=active' if view.__name__ == "contact_us" else ""}><a href="${request.route_url('contact_us')}">Contact Us</a></li>
     </ul>
 </div>
 
@@ -99,8 +99,8 @@
                 </div>
 
                 <ul class="nav navbar-nav navbar-left ct-navbar--fadeInLeft">
-                    <li ${'class=active' if view.__name__ == "homepage" else ""}><a href="/">Home</a></li>
-                    <li ${'class=active' if view.__name__ == "contact_us" else ""}><a href="/contact-us">Contact Us</a></li>
+                    <li ${'class=active' if view.__name__ == "homepage" else ""}><a href="${request.route_url('homepage')}">Home</a></li>
+                    <li ${'class=active' if view.__name__ == "contact_us" else ""}><a href="${request.route_url('contact_us')}">Contact Us</a></li>
                 </ul>
 
             </div>
