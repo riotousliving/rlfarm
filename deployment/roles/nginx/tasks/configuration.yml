@@ -45,7 +45,10 @@
   tags: [configuration,nginx]
 
 - name: Install Private Cert
-  copy: src=files/private.key dest={{nginx_conf_dir}}/private.key owner={{nginx_user}} group={{nginx_group}} mode=0640
+  copy: src=files/privkey.pem dest={{nginx_conf_dir}}/privkey.pem owner={{nginx_user}} group={{nginx_group}} mode=0640
 
 - name: Install Cert
-  copy: src=files/cert.key dest={{nginx_conf_dir}}/cert.key owner={{nginx_user}} group={{nginx_group}} mode=0644
+  copy: src=files/fullchain.pem dest={{nginx_conf_dir}}/fullchain.pem owner={{nginx_user}} group={{nginx_group}} mode=0644
+
+- name: Install DHPARAMS
+  copy: src=files/dhparams.pem dest={{nginx_conf_dir}}/dhparams.pem owner={{nginx_user}} group={{nginx_group}} mode=0644
