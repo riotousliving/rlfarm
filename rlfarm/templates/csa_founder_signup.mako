@@ -81,7 +81,11 @@
 
                     <div class="errorMessage alert alert-danger alert-dismissible" role="alert">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <span class="payment-error">Something went wrong.</span>
+                        <span class="payment-error">
+                        % if error is not UNDEFINED:
+                        ${error}
+                        % endif
+                        </span>
                     </div>
 
                     <p class="text-right ct-u-colorBrownDark2">*Required fields.</p>
@@ -144,6 +148,9 @@
 <%block name="extra_script">
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
+    % if has_error is not UNDEFINED:
+    $('.errorMessage').show();
+    % endif
     // This identifies your website in the createToken call below
     Stripe.setPublishableKey('pk_live_AhnRYQ9Dm9E04wBuvJEzqpyz');
     var stripeResponseHandler = function(status, response) {

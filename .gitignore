@@ -68,3 +68,4 @@ gce.ini
 gce.pem
 private.key
 cert.key
+production.ini.j2

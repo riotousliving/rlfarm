@@ -34,6 +34,10 @@ def csa_founder_signup(request):
             raise exc.HTTPFound(request.route_url("signup_success"))
         except stripe.error.InvalidRequestError:
             raise exc.HTTPInternalServerError()
+        except stripe.error.CardError as e:
+            body = e.json_body
+            err = body['error']
+            return {'has_error': True, 'error': err['message']}
     return {}
 
 
