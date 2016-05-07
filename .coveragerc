@@ -1,0 +1,14 @@
+[run]
+source = rlfarm/
+branch = True
+
+[html]
+directory = .coverage-html/
+
+[report]
+exclude_lines =
+    # Enable the standard pragma.
+    pragma: no cover
+
+    # Don't complain about missing debug-only code:
+    def __repr__

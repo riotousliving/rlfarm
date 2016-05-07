@@ -33,6 +33,7 @@ setup_requires = [
 tests_require = [
     'webtest',
     'pytest',
+    'pytest-cov',
 ]
 
 setup(name='rlfarm',
