@@ -1,4 +1,4 @@
-|Build Status|
+[![Coverage Status](https://coveralls.io/repos/github/wwitzel3/rlfarm/badge.svg?branch=master)](https://coveralls.io/github/wwitzel3/rlfarm?branch=master)
 
 rlfarm README
 ==================
