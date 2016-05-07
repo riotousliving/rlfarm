@@ -1,3 +1,0 @@
-#!/bin/bash
-
-ansible-playbook -u wwitzel -b --become-user=root -i inventory/gce --tags "app_only" rlfarm.yaml

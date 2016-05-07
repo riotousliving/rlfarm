@@ -1,5 +1,0 @@
----
-- include: createuser.yml
-- include: virtualenv.yml
-- include: supervisord.yml
-- include: app.yml
