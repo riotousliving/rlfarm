@@ -30,6 +30,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
+                <p>Our current CSA season is full! We are no longer accepting signups!</p>
+                <!--
                 <form data-email-subject="Form Subject" class="validateIt" role="form" action="" method="POST" id="payment-form">
                     <fieldset>
                     <legend>Share Owner Information</legend>
@@ -94,6 +96,7 @@
                         <button type="submit" class="btn btn-lg ct-btn-image btn-warning"><span>Join ($150)</span></button>
                     </div>
                 </form>
+                --!>
             </div>
             <div class="col-md-6">
                 <div class="col-xs-12">

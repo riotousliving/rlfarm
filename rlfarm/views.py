@@ -16,6 +16,8 @@ def contact_us(request):
 def csa_founder_signup(request):
     token = request.POST.get('stripeToken', None)
     if token is not None:
+        raise exc.HTTPNotFound()
+
         import stripe
         try:
             stripe.api_key = request.registry.settings.get('stripe.api_key')
