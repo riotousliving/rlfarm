@@ -30,17 +30,21 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="ct-infoBox ct-infoBox--type1">
-                    <div class="ct-infoBox-Content">
-                        <div class="ct-infoBox-title">
-                            <h3>No More Spots</h3>
-                        </div>
-                        <div class="ct-infoBox-text">
-                            <p>Our current CSA season is full and we are no longer accepting signups at this time. Please subscribe to our newsletter
-                            to be notified when we open signups for our next season.</p>
-                        </div>
-                    </div>
-                </div>
+				<div class="ct-infoBox ct-infoBox--type1">
+					<div class="ct-infoBox-content">
+						<div class="ct-divider ct-divider--big ct-u-marginBottom30"></div>
+
+						<div class="ct-infoBox-title">
+							<h3>no more spots</h3>
+						</div>
+
+						<div class="ct-infoBox-text">
+							<p>Our current CSA season is full and we are no longer accepting signups at this time. Please subscribe to our newsletter
+                               to be notified when we open signups for our next season.</p>
+						</div>
+					</div>
+				</div>
+		
                 <!--
                 <form data-email-subject="Form Subject" class="validateIt" role="form" action="" method="POST" id="payment-form">
                     <fieldset>
